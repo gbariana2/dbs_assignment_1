@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette — Issue No. 07</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,300;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Running Header -->
+  <div class="running-header" id="runningHeader">
+    <span class="rh-left">Campus Coffee Roulette</span>
+    <span class="rh-center" id="sectionIndicator">01</span>
+    <span class="rh-right">Spring 2026</span>
+  </div>
+
+  <!-- Mobile Nav -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-inner">
+      <div class="mobile-nav-header">
+        <span class="mn-issue">Issue No. 07</span>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#cover" data-section="01">Cover</a></li>
+        <li><a href="#lede" data-section="02">The Lede</a></li>
+        <li><a href="#mechanism" data-section="03">How It Works</a></li>
+        <li><a href="#landscape" data-section="04">The Landscape</a></li>
+        <li><a href="#photo-essay" data-section="05">Photo Essay</a></li>
+        <li><a href="#voices" data-section="06">Voices</a></li>
+        <li><a href="#enroll" data-section="07">Enroll</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <p>A feature by Campus Coffee Roulette<br>Chicago, Illinois</p>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 01: COVER / NAMEPLATE -->
+  <section class="cover" id="cover" data-section="01">
+    <div class="cover-content">
+      <div class="cover-meta">
+        <span class="cover-issue">Issue No. 07</span>
+        <span class="cover-divider">/</span>
+        <span class="cover-date">Spring 2026</span>
+        <span class="cover-divider">/</span>
+        <span class="cover-price">Free</span>
+      </div>
+
+      <h1 class="nameplate">
+        <span class="nameplate-the">The</span>
+        Coffee<br>Roulette<br>
+        <span class="nameplate-dispatch">Dispatch</span>
+      </h1>
+
+      <div class="cover-headline-block">
+        <div class="cover-rule"></div>
+        <h2 class="cover-headline">The Experiment That&rsquo;s Rewiring Chicago&rsquo;s Graduate Schools&mdash;One Espresso at a Time</h2>
+        <p class="cover-byline">By the editors of Campus Coffee Roulette &bull; Photography by Staff</p>
+      </div>
+
+      <div class="cover-scroll-cue">
+        <span>Scroll to begin</span>
+        <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+          <path d="M8 0v20M1 14l7 7 7-7" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02: THE LEDE -->
+  <section class="article-section lede" id="lede" data-section="02">
+    <div class="section-marker">
+      <span class="marker-num">02</span>
+      <span class="marker-label">The Lede</span>
+      <span class="marker-rule"></span>
+    </div>
+
+    <div class="lede-layout">
+      <div class="lede-opening">
+        <p class="dateline">CHICAGO &mdash; March 2026</p>
+        <p class="drop-cap-para"><span class="drop-cap">I</span>t starts with a name you don&rsquo;t recognize, an email from a domain you&rsquo;ve never seen in your inbox, and a suggestion to meet at a coffee shop you&rsquo;ve walked past a hundred times but never entered. This is Campus Coffee Roulette, and in less than two academic years, it has quietly become the most improbable networking phenomenon in Chicago&rsquo;s graduate ecosystem.</p>
+        <p>The premise is disarmingly simple. You sign up. An algorithm matches you with a graduate student from a different program, a different school, a different intellectual universe. You get a name, an email, and a week to find thirty minutes for coffee. That&rsquo;s it. No icebreaker prompts. No LinkedIn profiles. No agenda.</p>
+      </div>
+
+      <aside class="pull-quote pull-quote-right">
+        <blockquote>&ldquo;We wanted to build something that felt like the opposite of a networking event.&rdquo;</blockquote>
+        <cite>&mdash; Founding team member</cite>
+      </aside>
+
+      <div class="lede-body three-col">
+        <p>What happens next is the interesting part. A computational biology Ph.D. candidate at UChicago sits across from a social work student at Loyola. A mechanical engineering researcher at IIT discovers that the poet from Northwestern she&rsquo;s been matched with is working on the same fundamental question about pattern recognition&mdash;just in a wildly different language.</p>
+        <p>The project began in the autumn of 2024, when a small group of graduate students noticed something troubling: Chicago has one of the densest concentrations of graduate programs in the country, yet students at neighboring institutions might as well be on different continents. The silos were total. The isolation was chronic.<sup class="footnote-ref" data-note="1">1</sup></p>
+        <p>&ldquo;You could spend five years getting a Ph.D. at UChicago and never once have a real conversation with someone at Northwestern or IIT,&rdquo; recalls one early organizer. &ldquo;That struck us as absurd. These are people solving pieces of the same puzzles, and they don&rsquo;t even know each other exist.&rdquo;</p>
+        <p>Coffee Roulette was designed as an intervention&mdash;but a gentle one. No mandatory fun. No forced collaboration. Just an introduction, a location, and the radical proposition that conversation between strangers might still be worth something in an age of algorithmic feeds and professional optimization.</p>
+      </div>
+    </div>
+
+    <div class="continuation">Continued on next section &rarr;</div>
+  </section>
+
+  <!-- SECTION 03: THE MECHANISM -->
+  <section class="article-section mechanism" id="mechanism" data-section="03">
+    <div class="section-marker">
+      <span class="marker-num">03</span>
+      <span class="marker-label">The Mechanism</span>
+      <span class="marker-rule"></span>
+    </div>
+
+    <h2 class="section-headline">How the<br><span class="accent">Machine</span><br>Works</h2>
+
+    <div class="mechanism-grid">
+      <div class="mechanism-step">
+        <span class="step-number">01</span>
+        <h3 class="step-title">Registration</h3>
+        <p class="step-body">You provide a name, a university email, your institution, and your program. Nothing else. No bios, no headshots, no list of interests. The less information, the more serendipity.</p>
+      </div>
+      <div class="mechanism-step">
+        <span class="step-number">02</span>
+        <h3 class="step-title">The Match</h3>
+        <p class="step-body">Each Monday, the system pairs you with someone from a different program&mdash;ideally a different school entirely. You receive an email with their name and contact. They receive yours.</p>
+      </div>
+      <div class="mechanism-step">
+        <span class="step-number">03</span>
+        <h3 class="step-title">The Meeting</h3>
+        <p class="step-body">You have seven days. Find a coffee shop. Find thirty minutes. Show up as yourself. There are no discussion guides, no reporting requirements, no follow-up surveys.</p>
+      </div>
+      <div class="mechanism-step">
+        <span class="step-number">04</span>
+        <h3 class="step-title">The Ripple</h3>
+        <p class="step-body">Some matches become collaborators. Some become friends. Some remain a single, pleasant conversation. All of them crack the shell of institutional isolation, even if only by a fraction.</p>
+      </div>
+    </div>
+
+    <aside class="pull-quote pull-quote-wide">
+      <blockquote>&ldquo;The algorithm is deliberately stupid. It doesn&rsquo;t try to find your soulmate. It just finds someone different.&rdquo;</blockquote>
+    </aside>
+
+    <div class="footnote-block">
+      <p class="footnote" id="fn1"><sup>1</sup> A 2024 survey by the Chicago Graduate Student Alliance found that 73% of respondents had never had a substantive conversation with a graduate student at another Chicago institution during their entire program.</p>
+    </div>
+
+    <div class="continuation">Continued on next section &rarr;</div>
+  </section>
+
+  <!-- SECTION 04: THE LANDSCAPE -->
+  <section class="article-section landscape" id="landscape" data-section="04">
+    <div class="section-marker">
+      <span class="marker-num">04</span>
+      <span class="marker-label">The Landscape</span>
+      <span class="marker-rule"></span>
+    </div>
+
+    <h2 class="section-headline">Seven Schools.<br>One <span class="accent">City</span>.</h2>
+
+    <div class="landscape-intro">
+      <p>Chicago&rsquo;s graduate landscape is both a marvel and a paradox. Within a thirty-mile radius, seven major institutions house thousands of graduate students pursuing hundreds of distinct programs. They ride the same L trains, frequent the same coffee shops, and wrestle with the same existential questions about their futures&mdash;yet they inhabit parallel universes.</p>
+    </div>
+
+    <div class="schools-grid">
+      <div class="school-card">
+        <span class="school-location">Hyde Park</span>
+        <h3 class="school-name">University of Chicago</h3>
+        <p class="school-note">Where interdisciplinary was a founding principle, not a buzzword. Home to 10,000+ graduate and professional students across the sciences, humanities, law, business, and public policy.</p>
+      </div>
+      <div class="school-card">
+        <span class="school-location">Evanston / Chicago</span>
+        <h3 class="school-name">Northwestern University</h3>
+        <p class="school-note">Straddling the city-suburb divide with programs spanning engineering, journalism, performing arts, and medicine. A campus that looks toward the lake and, increasingly, toward the city.</p>
+      </div>
+      <div class="school-card">
+        <span class="school-location">Near West Side</span>
+        <h3 class="school-name">University of Illinois Chicago</h3>
+        <p class="school-note">The city&rsquo;s public research powerhouse. UIC&rsquo;s graduate programs in urban planning, public health, and education are shaped by the city that surrounds them.</p>
+      </div>
+      <div class="school-card">
+        <span class="school-location">Rogers Park / Water Tower</span>
+        <h3 class="school-name">Loyola University Chicago</h3>
+        <p class="school-note">A Jesuit institution with deep roots in social justice. Graduate programs in social work, psychology, and bioethics draw students committed to community impact.</p>
+      </div>
+      <div class="school-card">
+        <span class="school-location">Lincoln Park / Loop</span>
+        <h3 class="school-name">DePaul University</h3>
+        <p class="school-note">The largest Catholic university in the nation, with graduate strengths in computer science, education, business, and the performing arts.</p>
+      </div>
+      <div class="school-card">
+        <span class="school-location">Bronzeville</span>
+        <h3 class="school-name">Illinois Institute of Technology</h3>
+        <p class="school-note">Mies van der Rohe&rsquo;s campus is a fitting home for programs in architecture, engineering, computer science, and design that emphasize building the future.</p>
+      </div>
+      <div class="school-card school-card-other">
+        <span class="school-location">Across the City</span>
+        <h3 class="school-name">& Others</h3>
+        <p class="school-note">SAIC, Columbia College, Adler University, and more. Chicago&rsquo;s graduate ecosystem extends far beyond the usual suspects. All are welcome.</p>
+      </div>
+    </div>
+
+    <div class="continuation">Continued on next section &rarr;</div>
+  </section>
+
+  <!-- SECTION 05: PHOTO ESSAY SPREAD -->
+  <section class="photo-essay" id="photo-essay" data-section="05">
+    <div class="photo-spread">
+      <div class="photo-placeholder">
+        <div class="photo-inner">
+          <span class="photo-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="4" y="8" width="40" height="32" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="16" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4 32l10-8 6 4 12-10 12 8" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </span>
+          <span class="photo-label-inner">Photograph</span>
+        </div>
+      </div>
+      <div class="photo-caption-block">
+        <p class="photo-caption"><strong>Above:</strong> Two graduate students meet for the first time at Bridgeport Coffee, on the South Side of Chicago. She studies computational neuroscience at UChicago; he is pursuing an M.F.A. in poetry at Columbia College. Their thirty-minute coffee lasted two hours. <em>Staff photograph, February 2026.</em></p>
+        <p class="photo-credit">Campus Coffee Roulette / Staff</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06: VOICES -->
+  <section class="article-section voices" id="voices" data-section="06">
+    <div class="section-marker">
+      <span class="marker-num">06</span>
+      <span class="marker-label">Voices</span>
+      <span class="marker-rule"></span>
+    </div>
+
+    <h2 class="section-headline">What They<br><span class="accent">Found</span></h2>
+
+    <div class="voices-layout">
+      <div class="voice-block">
+        <p class="drop-cap-para"><span class="drop-cap">M</span>aria Chen was three years into her Ph.D. in astrophysics at UChicago when she was matched with a design student at IIT. &ldquo;I hadn&rsquo;t spoken to anyone outside my department in months,&rdquo; she says. &ldquo;Not because I didn&rsquo;t want to. Because the infrastructure for it simply didn&rsquo;t exist.&rdquo; That single coffee led to a data visualization collaboration that was later presented at a national conference.</p>
+      </div>
+
+      <aside class="pull-quote pull-quote-left">
+        <blockquote>&ldquo;I signed up on a whim. It was the best professional decision I made in graduate school.&rdquo;</blockquote>
+        <cite>&mdash; M.A. candidate, Northwestern</cite>
+      </aside>
+
+      <div class="voice-block">
+        <p>James Okafor, a public health student at UIC, puts it differently. &ldquo;Grad school is lonely in a way that nobody warns you about. Coffee Roulette didn&rsquo;t solve that, but it reminded me that there are thousands of people in this city going through the exact same thing. That mattered.&rdquo;</p>
+        <p>Not every match produces a revelation. Some conversations are pleasant but unremarkable. The organizers consider this a feature, not a bug. &ldquo;We&rsquo;re not optimizing for outcomes,&rdquo; one explains. &ldquo;We&rsquo;re optimizing for encounters. The outcomes take care of themselves.&rdquo;</p>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-num">2,400+</span>
+          <span class="stat-label">Matches made since launch</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">87%</span>
+          <span class="stat-label">Actually met for coffee</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">7</span>
+          <span class="stat-label">Partner institutions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">34</span>
+          <span class="stat-label">Cross-campus collaborations born</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="continuation">Continued on next section &rarr;</div>
+  </section>
+
+  <!-- SECTION 07: ENROLLMENT / SIGNUP -->
+  <section class="article-section enroll" id="enroll" data-section="07">
+    <div class="section-marker">
+      <span class="marker-num">07</span>
+      <span class="marker-label">Enroll</span>
+      <span class="marker-rule"></span>
+    </div>
+
+    <div class="enroll-layout">
+      <div class="enroll-text">
+        <h2 class="section-headline">Enter the<br><span class="accent">Roulette</span></h2>
+        <p class="drop-cap-para"><span class="drop-cap">T</span>his is the part of the article where a magazine would normally end with a pithy kicker and a page turn. Instead, we&rsquo;re ending with a form. If you&rsquo;re a graduate student at a Chicago-area institution and you&rsquo;re willing to spend thirty minutes with a stranger over coffee, this is your entry point.</p>
+        <p>Registration takes under a minute. Your first match arrives within a week. What happens after that is entirely up to you and the person sitting across the table.</p>
+
+        <p class="form-footnote"><sup>&dagger;</sup> Your information is used solely for matching purposes. We don&rsquo;t sell data, send newsletters, or do anything clever with your email. This is coffee, not a platform.</p>
+      </div>
+
+      <div class="enroll-form-wrapper">
+        <div class="form-header">
+          <span class="form-header-label">Registration Form</span>
+          <span class="form-header-issue">CCR-07</span>
+        </div>
+        <form class="signup-form" id="signupForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="As you'd like to be introduced">
+          </div>
+          <div class="form-group">
+            <label for="email">University Email</label>
+            <input type="email" id="email" name="email" required placeholder="your.name@university.edu">
+          </div>
+          <div class="form-group">
+            <label for="university">Institution</label>
+            <select id="university" name="university" required>
+              <option value="" disabled selected>Select your university</option>
+              <option value="uchicago">University of Chicago</option>
+              <option value="northwestern">Northwestern University</option>
+              <option value="uic">University of Illinois Chicago</option>
+              <option value="loyola">Loyola University Chicago</option>
+              <option value="depaul">DePaul University</option>
+              <option value="iit">Illinois Institute of Technology</option>
+              <option value="other">Other Chicago-area institution</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="program">Graduate Program</label>
+            <input type="text" id="program" name="program" required placeholder="e.g., Ph.D. in Comparative Literature">
+          </div>
+          <button type="submit" class="submit-btn">
+            <span class="submit-text">Submit Registration</span>
+            <span class="submit-arrow">&rarr;</span>
+          </button>
+        </form>
+
+        <div class="form-confirmation" id="formConfirmation">
+          <div class="confirmation-inner">
+            <span class="confirmation-check">&#10003;</span>
+            <h3>Registration Received</h3>
+            <p>Your first match will arrive within the week. Watch your university inbox.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLOPHON / FOOTER -->
+  <footer class="colophon">
+    <div class="colophon-inner">
+      <div class="colophon-left">
+        <p class="colophon-title">The Coffee Roulette Dispatch</p>
+        <p class="colophon-meta">Issue No. 07 &mdash; Spring 2026<br>Chicago, Illinois</p>
+      </div>
+      <div class="colophon-center">
+        <p class="colophon-note">Campus Coffee Roulette is a student-run initiative. It is not affiliated with or endorsed by any of the universities listed in this publication.</p>
+      </div>
+      <div class="colophon-right">
+        <p class="colophon-end">&mdash; End of Issue &mdash;</p>
+        <p class="colophon-page">Page 12 of 12</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Running Footer -->
+  <div class="running-footer">
+    <span>The Coffee Roulette Dispatch</span>
+    <span>&bull;</span>
+    <span>Issue 07</span>
+    <span>&bull;</span>
+    <span>Page <span id="pageNum">1</span> of 12</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

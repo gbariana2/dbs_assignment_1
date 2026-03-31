@@ -3,226 +3,869 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gurshaan Bariana</title>
+  <title>Design, Build, Ship &mdash; Campus Coffee Roulette</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">Gurshaan Bariana</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
-        </li>
-      </ul>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="nav-logo">
+          <span class="logo-mark">DBS</span>
+          <span class="logo-text">Design, Build, Ship</span>
+        </a>
+        <div class="nav-right">
+          <span class="iteration-count"><span id="count">25</span> / 25</span>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <!-- Hero -->
-  <section class="hero" id="hero">
+  <section class="hero">
     <div class="container">
-      <p class="hero-greeting">Hi, I'm</p>
-      <h1 class="hero-name">Gurshaan Bariana</h1>
-      <p class="hero-subtitle">MBA & MS Computer Science candidate at Chicago Booth</p>
-      <p class="hero-tagline">Bridging business strategy and technology to build what's next.</p>
-      <div class="hero-cta">
-        <a href="#experience" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title fade-in">About Me</h2>
-      <div class="about-content fade-in">
-        <div class="about-image">
-          <div class="image-placeholder">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
-            <p>Your photo here</p>
-          </div>
+      <p class="hero-label">A design exploration</p>
+      <h1>One Concept.<br>25 Directions.<br><span class="hero-accent">Radically Different Every Time.</span></h1>
+      <p class="hero-body">Campus Coffee Roulette — a simple idea for connecting grad students over coffee. But what happens when you design the same landing page 25 completely different ways? Each version below is a radical reimagining: different aesthetic, different mood, same core concept.</p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">Designer</span>
+          <span class="meta-value">Gurshaan Bariana</span>
         </div>
-        <div class="about-text">
-          <p>I'm a dual-degree MBA and MS in Computer Science student at the University of Chicago Booth School of Business. My background spans both technology and business, and I'm passionate about leveraging that intersection to drive meaningful impact.</p>
-          <p>When I'm not studying or working, you'll find me behind a camera lens, exploring new music, or experimenting in the kitchen. I believe the best ideas come from diverse experiences and curiosity across disciplines.</p>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Concept</span>
+          <span class="meta-value">Campus Coffee Roulette</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-label">Progress</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 100%"></div>
+          </div>
+          <span class="meta-value">25 of 25</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section class="section section-alt" id="experience">
+  <!-- Story -->
+  <section class="story-section">
     <div class="container">
-      <h2 class="section-title fade-in">Experience</h2>
-      <div class="timeline">
-
-        <div class="timeline-item fade-in">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">Summer 2025</span>
-            <h3>Business/Tech Internship</h3>
-            <p class="timeline-company">Company Name</p>
-            <p>Brief description of your role, key projects, and impact. Replace this with your actual experience.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-in">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2022 &mdash; 2024</span>
-            <h3>Software Engineer / Analyst</h3>
-            <p class="timeline-company">Company Name</p>
-            <p>Brief description of your role, responsibilities, and achievements. Replace this with your actual experience.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-in">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">Summer 2021</span>
-            <h3>Previous Role / Internship</h3>
-            <p class="timeline-company">Company Name</p>
-            <p>Brief description of your role and what you accomplished. Replace this with your actual experience.</p>
-          </div>
-        </div>
-
-      </div>
+      <h2 class="story-heading">The Collection</h2>
+      <p class="story-intro">Same product, wildly different executions. Click any card to explore the full landing page. Each version is a complete, functional page with its own personality.</p>
     </div>
   </section>
 
-  <!-- Education -->
-  <section class="section" id="education">
+  <!-- Gallery Grid -->
+  <section class="gallery-section">
     <div class="container">
-      <h2 class="section-title fade-in">Education</h2>
-      <div class="education-grid">
+      <div class="gallery-grid">
 
-        <div class="education-card fade-in">
-          <div class="education-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/>
-            </svg>
+        <!-- V1 — Warm & Approachable -->
+        <a href="v1/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Warm & Approachable</span>
+            </div>
+            <div class="card-thumbnail thumb-v1">
+              <div class="thumb-content">
+                <span class="thumb-badge-warm">For Chicago grad students</span>
+                <span class="thumb-heading-warm">Meet someone new<br>over coffee</span>
+                <div class="thumb-buttons">
+                  <span class="thumb-btn" style="background: linear-gradient(135deg, #c2410c, #ea580c);"></span>
+                  <span class="thumb-btn-ghost"></span>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3>University of Chicago Booth</h3>
-          <p class="education-degree">MBA & MS in Computer Science</p>
-          <p class="education-date">2024 &mdash; 2026 (Expected)</p>
-          <p class="education-details">Dual degree combining business strategy with deep technical expertise. Relevant coursework in machine learning, product management, and entrepreneurship.</p>
-        </div>
-
-        <div class="education-card fade-in">
-          <div class="education-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/>
-            </svg>
+          <div class="card-info">
+            <div class="card-number">01</div>
+            <div class="card-details">
+              <h3>Warm & Approachable</h3>
+              <p class="card-desc">The original — cream tones, orange accents, and a friendly signup flow. Designed to feel like a warm invitation.</p>
+              <div class="card-tags">
+                <span class="tag">Warm Palette</span>
+                <span class="tag">Orange</span>
+                <span class="tag">Inviting</span>
+              </div>
+            </div>
           </div>
-          <h3>Your Undergraduate University</h3>
-          <p class="education-degree">Bachelor's Degree in Your Major</p>
-          <p class="education-date">20XX &mdash; 20XX</p>
-          <p class="education-details">Replace this with details about your undergraduate education, honors, relevant coursework, or activities.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Interests -->
-  <section class="section section-alt" id="interests">
-    <div class="container">
-      <h2 class="section-title fade-in">Interests</h2>
-      <div class="interests-grid">
-
-        <div class="interest-card fade-in">
-          <div class="interest-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-              <circle cx="12" cy="13" r="4"/>
-            </svg>
-          </div>
-          <h3>Photography</h3>
-          <p>Capturing moments through the lens — from street photography to landscapes. There's something special about freezing a fleeting second in time.</p>
-        </div>
-
-        <div class="interest-card fade-in">
-          <div class="interest-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 18V5l12-2v13"/>
-              <circle cx="6" cy="18" r="3"/>
-              <circle cx="18" cy="16" r="3"/>
-            </svg>
-          </div>
-          <h3>Music</h3>
-          <p>Whether it's discovering new artists, attending live shows, or just vibing to a great playlist — music is a constant companion in everything I do.</p>
-        </div>
-
-        <div class="interest-card fade-in">
-          <div class="interest-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2C6.48 2 2 6 2 10.5c0 3 1.5 5.5 4 7v4.5l3.5-2c.8.2 1.6.3 2.5.3 5.52 0 10-4 10-8.5S17.52 2 12 2z"/>
-              <path d="M8 10h0M12 10h0M16 10h0"/>
-            </svg>
-          </div>
-          <h3>Food & Cooking</h3>
-          <p>Exploring cuisines from around the world, experimenting with new recipes, and sharing meals with friends. Food is culture, creativity, and community.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2 class="section-title fade-in">Get in Touch</h2>
-      <p class="contact-text fade-in">I'm always open to new conversations, collaborations, and opportunities. Feel free to reach out.</p>
-      <div class="contact-links fade-in">
-        <a href="mailto:your.email@example.com" class="contact-link">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          <span>your.email@example.com</span>
         </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-link">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-            <rect x="2" y="9" width="4" height="12"/>
-            <circle cx="4" cy="4" r="2"/>
-          </svg>
-          <span>LinkedIn</span>
+
+        <!-- V2 — Brutalist -->
+        <a href="v2/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Brutalist</span>
+            </div>
+            <div class="card-thumbnail thumb-v2">
+              <div class="thumb-content">
+                <span class="thumb-heading-brut">CAMPUS<br>COFFEE<br>ROULETTE</span>
+                <span class="thumb-accent-bar"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">02</div>
+            <div class="card-details">
+              <h3>Brutalist</h3>
+              <p class="card-desc">Raw, bold, unapologetic. Massive monospace type, stark black and white, sharp edges, and pops of red. Anti-design that demands attention.</p>
+              <div class="card-tags">
+                <span class="tag">Monospace</span>
+                <span class="tag">B&W + Red</span>
+                <span class="tag">Raw</span>
+              </div>
+            </div>
+          </div>
         </a>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-link">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-          </svg>
-          <span>GitHub</span>
+
+        <!-- V3 — Retro Diner -->
+        <a href="v3/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Retro Diner</span>
+            </div>
+            <div class="card-thumbnail thumb-v3">
+              <div class="thumb-content">
+                <div class="thumb-seal">
+                  <span class="thumb-seal-text">CAMPUS<br>COFFEE<br>ROULETTE</span>
+                </div>
+                <span class="thumb-est">~ Est. 2026 ~</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">03</div>
+            <div class="card-details">
+              <h3>Retro Diner</h3>
+              <p class="card-desc">Vintage coffee shop meets 1950s Americana. Warm browns, serif typography, badge stamps, and paper-like textures. Charming and nostalgic.</p>
+              <div class="card-tags">
+                <span class="tag">Vintage</span>
+                <span class="tag">Serif</span>
+                <span class="tag">Coffee Tones</span>
+              </div>
+            </div>
+          </div>
         </a>
+
+        <!-- V4 — Neon Cyberpunk -->
+        <a href="v4/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Neon Cyberpunk</span>
+            </div>
+            <div class="card-thumbnail thumb-v4">
+              <div class="thumb-scanlines"></div>
+              <div class="thumb-content">
+                <span class="thumb-heading-neon">COFFEE<br>ROULETTE</span>
+                <span class="thumb-sub-neon">// NETWORK.INIT</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">04</div>
+            <div class="card-details">
+              <h3>Neon Cyberpunk</h3>
+              <p class="card-desc">Dark void meets electric neon. Glowing cyan and magenta, scanline overlays, flickering effects. Blade Runner meets a Tokyo coffee bar.</p>
+              <div class="card-tags">
+                <span class="tag">Dark</span>
+                <span class="tag">Neon Glow</span>
+                <span class="tag">Futuristic</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V5 — Memphis / Playful -->
+        <a href="v5/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Memphis Playful</span>
+            </div>
+            <div class="card-thumbnail thumb-v5">
+              <div class="thumb-shape thumb-circle"></div>
+              <div class="thumb-shape thumb-triangle"></div>
+              <div class="thumb-shape thumb-dot"></div>
+              <div class="thumb-content">
+                <span class="thumb-heading-memphis">Coffee<br>Roulette!</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">05</div>
+            <div class="card-details">
+              <h3>Memphis Playful</h3>
+              <p class="card-desc">Bold primary colors, geometric shapes, and chunky type. 80s Memphis design energy — fun, loud, and unapologetically youthful.</p>
+              <div class="card-tags">
+                <span class="tag">Colorful</span>
+                <span class="tag">Geometric</span>
+                <span class="tag">Playful</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V6 — Editorial -->
+        <a href="v6/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Editorial</span>
+            </div>
+            <div class="card-thumbnail thumb-v6">
+              <div class="thumb-content">
+                <span class="thumb-heading-edit">Campus<br>Coffee<br>Roulette</span>
+                <span class="thumb-rule"></span>
+                <span class="thumb-sub-edit">Vol. I &mdash; Chicago</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">06</div>
+            <div class="card-details">
+              <h3>Editorial / Magazine</h3>
+              <p class="card-desc">Luxury print editorial aesthetic. Elegant serifs, asymmetric layouts, hairline rules, and burgundy accents. Monocle meets Kinfolk.</p>
+              <div class="card-tags">
+                <span class="tag">Serif</span>
+                <span class="tag">Asymmetric</span>
+                <span class="tag">Elegant</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V7 — Magazine Editorial -->
+        <a href="v7/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Magazine Editorial</span>
+            </div>
+            <div class="card-thumbnail thumb-v7">
+              <div class="thumb-content">
+                <span class="thumb-issue">Issue No. 07 &mdash; Spring 2026</span>
+                <span class="thumb-heading-mag">The Coffee<br>Roulette<br>Dispatch</span>
+                <span class="thumb-byline-mag">A feature story</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">07</div>
+            <div class="card-details">
+              <h3>Magazine Editorial</h3>
+              <p class="card-desc">A glossy feature article spread. Multi-column text, drop caps, pull quotes, running headers, and photo placeholders. Bloomberg Businessweek meets Wired.</p>
+              <div class="card-tags">
+                <span class="tag">Multi-Column</span>
+                <span class="tag">Drop Caps</span>
+                <span class="tag">Electric Blue</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V8 — Brutalist Manifesto -->
+        <a href="v8/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Brutalist Manifesto</span>
+            </div>
+            <div class="card-thumbnail thumb-v8">
+              <div class="thumb-content">
+                <span class="thumb-heading-zine">WE REFUSE<br>TO NETWORK<br><span class="thumb-yellow">POLITELY.</span></span>
+                <span class="thumb-stamp">CLASSIFIED</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">08</div>
+            <div class="card-details">
+              <h3>Brutalist Manifesto</h3>
+              <p class="card-desc">Underground zine meets protest poster. Numbered declarations, strikethrough text, cut-and-paste misalignment, and yellow highlighter on black. Urgent and rebellious.</p>
+              <div class="card-tags">
+                <span class="tag">Manifesto</span>
+                <span class="tag">Zine</span>
+                <span class="tag">Yellow + Black</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V9 — Calm Minimal -->
+        <a href="v9/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Calm Minimal</span>
+            </div>
+            <div class="card-thumbnail thumb-v9">
+              <div class="thumb-content">
+                <span class="thumb-heading-calm">A quiet invitation<br>to connect.</span>
+                <span class="thumb-rule-calm"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">09</div>
+            <div class="card-details">
+              <h3>Calm Minimal</h3>
+              <p class="card-desc">A single centered column, generous whitespace, and one serif typeface. No nav, no cards, no grids — just words and breathing room. The page whispers.</p>
+              <div class="card-tags">
+                <span class="tag">Single Column</span>
+                <span class="tag">Serif Only</span>
+                <span class="tag">Zen</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V10 — Japanese Wabi-Sabi -->
+        <a href="v10/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Wabi-Sabi</span>
+            </div>
+            <div class="card-thumbnail thumb-v10">
+              <div class="thumb-enso"></div>
+              <div class="thumb-content">
+                <span class="thumb-heading-wabi">一期一会</span>
+                <span class="thumb-sub-wabi">one meeting, one moment</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">10</div>
+            <div class="card-details">
+              <h3>Japanese Wabi-Sabi</h3>
+              <p class="card-desc">Zen garden stillness. Earthy tones, vertical text, enso circles, and the beauty of imperfection. Inspired by the Japanese kissaten.</p>
+              <div class="card-tags">
+                <span class="tag">Zen</span>
+                <span class="tag">Vertical Text</span>
+                <span class="tag">Terracotta</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V11 — SaaS / Startup -->
+        <a href="v11/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">SaaS Startup</span>
+            </div>
+            <div class="card-thumbnail thumb-v11">
+              <div class="thumb-aurora"></div>
+              <div class="thumb-content">
+                <span class="thumb-heading-saas">Campus Coffee<br>Roulette</span>
+                <span class="thumb-sub-saas">Networking, reimagined.</span>
+                <span class="thumb-btn" style="background: linear-gradient(135deg, #6366f1, #06b6d4); width: 80px;"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">11</div>
+            <div class="card-details">
+              <h3>SaaS / Startup</h3>
+              <p class="card-desc">Polished product launch page. Aurora gradient hero, feature grid, social proof metrics, and trusted-by logos. Feels like a funded startup.</p>
+              <div class="card-tags">
+                <span class="tag">Product</span>
+                <span class="tag">Aurora Gradient</span>
+                <span class="tag">Professional</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V12 — Newspaper -->
+        <a href="v12/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Newspaper</span>
+            </div>
+            <div class="card-thumbnail thumb-v12">
+              <div class="thumb-content">
+                <span class="thumb-masthead">The Graduate Gazette</span>
+                <span class="thumb-rule-news"></span>
+                <span class="thumb-headline">Students Find Connection<br>Over Coffee</span>
+                <span class="thumb-dateline">Chicago, IL &mdash; March 2026</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">12</div>
+            <div class="card-details">
+              <h3>Newspaper / Broadsheet</h3>
+              <p class="card-desc">Front page of a physical newspaper. Multi-column justified text, masthead, bylines, datelines, and a classified-ad signup form.</p>
+              <div class="card-tags">
+                <span class="tag">Multi-Column</span>
+                <span class="tag">Justified</span>
+                <span class="tag">B&W</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V13 — Glassmorphism -->
+        <a href="v13/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Glassmorphism</span>
+            </div>
+            <div class="card-thumbnail thumb-v13">
+              <div class="thumb-orb thumb-orb-1"></div>
+              <div class="thumb-orb thumb-orb-2"></div>
+              <div class="thumb-content">
+                <div class="thumb-glass-card">
+                  <span class="thumb-heading-glass">Coffee<br>Roulette</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">13</div>
+            <div class="card-details">
+              <h3>Glassmorphism</h3>
+              <p class="card-desc">Frosted glass cards floating over a vivid animated gradient. Blurred color orbs, translucent layers, and dreamy depth. iOS meets art.</p>
+              <div class="card-tags">
+                <span class="tag">Frosted Glass</span>
+                <span class="tag">Gradient</span>
+                <span class="tag">Dreamy</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V14 — Terminal / CLI -->
+        <a href="v14/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Terminal</span>
+            </div>
+            <div class="card-thumbnail thumb-v14">
+              <div class="thumb-content">
+                <span class="thumb-prompt">$ coffee-roulette</span>
+                <span class="thumb-output">> Matching you with<br>> a stranger over<br>> coffee...</span>
+                <span class="thumb-cursor"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">14</div>
+            <div class="card-details">
+              <h3>Terminal / CLI</h3>
+              <p class="card-desc">The entire page is a terminal window. ASCII art, command prompts, typewriter animation, directory listings, and matrix rain. Pure hacker aesthetic.</p>
+              <div class="card-tags">
+                <span class="tag">Monospace</span>
+                <span class="tag">Green on Black</span>
+                <span class="tag">ASCII Art</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V15 — Collage / Scrapbook -->
+        <a href="v15/index.html" class="gallery-card">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Scrapbook</span>
+            </div>
+            <div class="card-thumbnail thumb-v15">
+              <div class="thumb-tape"></div>
+              <div class="thumb-sticky thumb-sticky-1"></div>
+              <div class="thumb-sticky thumb-sticky-2"></div>
+              <div class="thumb-content">
+                <span class="thumb-heading-scrap">Coffee<br>Roulette</span>
+                <span class="thumb-sticker">FREE!</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">15</div>
+            <div class="card-details">
+              <h3>Collage / Scrapbook</h3>
+              <p class="card-desc">Pinned cards, tape strips, sticky notes, Polaroid frames, and torn-paper edges on craft paper. Handmade, tactile, and full of personality.</p>
+              <div class="card-tags">
+                <span class="tag">Handwritten</span>
+                <span class="tag">Tactile</span>
+                <span class="tag">Craft Paper</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V16 — Warm Editorial (Convergence 1) -->
+        <a href="v16/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Convergence 1/3</span>
+            </div>
+            <div class="card-thumbnail thumb-v16">
+              <div class="thumb-seal-v16"></div>
+              <div class="thumb-content">
+                <span class="thumb-num-v16">01</span>
+                <span class="thumb-heading-v16">Campus Coffee<br>Roulette</span>
+                <span class="thumb-rule-v16"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">16</div>
+            <div class="card-details">
+              <h3>Warm Editorial</h3>
+              <p class="card-desc">V3's warmth and seal, V6's editorial structure and section numbers, V9's breathing room. A coffee table book about coffee culture.</p>
+              <div class="card-tags">
+                <span class="tag">V3 + V6 + V9</span>
+                <span class="tag">Convergence</span>
+                <span class="tag">Warm</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V17 — Elegant Calm (Convergence 2) -->
+        <a href="v17/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Convergence 2/3</span>
+            </div>
+            <div class="card-thumbnail thumb-v17">
+              <div class="thumb-circle-v17"></div>
+              <div class="thumb-content">
+                <span class="thumb-label-v17">an invitation</span>
+                <span class="thumb-heading-v17">Campus Coffee<br>Roulette</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">17</div>
+            <div class="card-details">
+              <h3>Elegant Calm</h3>
+              <p class="card-desc">V6's Cormorant elegance meets V9's single-column stillness, with V3's warmth in the palette. One font, three weights, nothing else needed.</p>
+              <div class="card-tags">
+                <span class="tag">V3 + V6 + V9</span>
+                <span class="tag">Convergence</span>
+                <span class="tag">Restrained</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V18 — The Distillation (Convergence 3) -->
+        <a href="v18/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Convergence 3/3</span>
+            </div>
+            <div class="card-thumbnail thumb-v18">
+              <div class="thumb-content">
+                <span class="thumb-heading-v18">Campus Coffee<br>Roulette</span>
+                <span class="thumb-orn-v18">~</span>
+                <span class="thumb-sub-v18">A quiet way to meet.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">18</div>
+            <div class="card-details">
+              <h3>The Distillation</h3>
+              <p class="card-desc">The final convergence. V3's warmth, V6's intention, V9's stillness — distilled into one page that feels inevitable. Libre Baskerville, clay accent, 120px of breathing room.</p>
+              <div class="card-tags">
+                <span class="tag">V3 + V6 + V9</span>
+                <span class="tag">Final</span>
+                <span class="tag">The Answer</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V19 — Full-Width Warm -->
+        <a href="v19/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Full-Width</span>
+            </div>
+            <div class="card-thumbnail thumb-v19">
+              <div class="thumb-v19-quote"></div>
+              <div class="thumb-content">
+                <div class="thumb-v19-cols">
+                  <div class="thumb-v19-left">
+                    <span class="thumb-heading-v19">Meet someone<br>new over coffee</span>
+                  </div>
+                  <div class="thumb-v19-right">
+                    <span class="thumb-v19-stat">6+</span>
+                    <span class="thumb-v19-stat">30m</span>
+                    <span class="thumb-v19-stat">Free</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">19</div>
+            <div class="card-details">
+              <h3>Full-Width Warm</h3>
+              <p class="card-desc">V18's warm palette and icons expanded edge-to-edge. Two-column layouts, step cards, dark pull-quote band, and a proper form card. The page fills the screen.</p>
+              <div class="card-tags">
+                <span class="tag">Full Width</span>
+                <span class="tag">Two-Column</span>
+                <span class="tag">Convergence</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V20 — Interactive Warm -->
+        <a href="v20/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Interactive</span>
+            </div>
+            <div class="card-thumbnail thumb-v20">
+              <div class="thumb-content">
+                <div class="thumb-v20-mug"></div>
+                <span class="thumb-heading-v20">Meet someone new<br>over coffee</span>
+                <div class="thumb-v20-chips">
+                  <span class="thumb-v20-chip">UChicago</span>
+                  <span class="thumb-v20-chip active">Northwestern</span>
+                  <span class="thumb-v20-chip">UIC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">20</div>
+            <div class="card-details">
+              <h3>Interactive Warm</h3>
+              <p class="card-desc">Filled brown mug icon, clickable university chips that scroll to signup and pre-select your school. Small details that make it feel real.</p>
+              <div class="card-tags">
+                <span class="tag">Interactive</span>
+                <span class="tag">Filled Icons</span>
+                <span class="tag">Convergence</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V21 — Fully Interactive -->
+        <a href="v21/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Fully Interactive</span>
+            </div>
+            <div class="card-thumbnail thumb-v21">
+              <div class="thumb-content">
+                <span class="thumb-heading-v21">Meet someone new<br>over coffee</span>
+                <div class="thumb-v21-actions">
+                  <span class="thumb-v21-btn-fill">Get matched</span>
+                  <span class="thumb-v21-btn-out">Demo</span>
+                </div>
+                <div class="thumb-v21-faq">
+                  <span class="thumb-v21-faq-q">Is this free? <em>+</em></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">21</div>
+            <div class="card-details">
+              <h3>Fully Interactive</h3>
+              <p class="card-desc">Demo match modal, animated counters, step progress bar, school tooltips, FAQ accordion, live form validation, and a back-to-top button. The page comes alive.</p>
+              <div class="card-tags">
+                <span class="tag">Modal</span>
+                <span class="tag">Accordion</span>
+                <span class="tag">Validation</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V22 — Testimonials -->
+        <a href="v22/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Testimonials</span>
+            </div>
+            <div class="card-thumbnail thumb-v22">
+              <div class="thumb-content">
+                <span class="thumb-v22-quote">"Coffee Roulette pops the grad school bubble — gently."</span>
+                <div class="thumb-v22-author">
+                  <span class="thumb-v22-avatar">ML</span>
+                  <span class="thumb-v22-name">Maria L., IIT</span>
+                </div>
+                <div class="thumb-v22-dots">
+                  <span class="thumb-v22-dot"></span>
+                  <span class="thumb-v22-dot active"></span>
+                  <span class="thumb-v22-dot"></span>
+                  <span class="thumb-v22-dot"></span>
+                  <span class="thumb-v22-dot"></span>
+                  <span class="thumb-v22-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">22</div>
+            <div class="card-details">
+              <h3>Testimonials</h3>
+              <p class="card-desc">Six user quotes in a carousel with auto-advance, prev/next arrows, dot navigation, and hover-to-pause. Real voices from Kellogg, Booth, Harris, IIT, DePaul, and UChicago.</p>
+              <div class="card-tags">
+                <span class="tag">Carousel</span>
+                <span class="tag">Social Proof</span>
+                <span class="tag">Convergence</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V23 — Polished Nav -->
+        <a href="v23/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Polished</span>
+            </div>
+            <div class="card-thumbnail thumb-v23">
+              <div class="thumb-content">
+                <div class="thumb-v23-nav">
+                  <span>About</span><span>How</span><span>Schools</span><span class="thumb-v23-active">Testimonials</span><span>FAQ</span><span class="thumb-v23-join">Join</span>
+                </div>
+                <span class="thumb-heading-v23">Meet someone new<br>over coffee</span>
+                <div class="thumb-v23-trusted">UChicago &middot; Northwestern &middot; UIC &middot; ...</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">23</div>
+            <div class="card-details">
+              <h3>Polished Navigation</h3>
+              <p class="card-desc">Full nav with Testimonials + FAQ links, scroll-spy active states, trusted-by university bar, and subtle hero background gradients. The complete page.</p>
+              <div class="card-tags">
+                <span class="tag">Full Nav</span>
+                <span class="tag">Scroll Spy</span>
+                <span class="tag">Polish</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V24 — Design Polish -->
+        <a href="v24/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Refined</span>
+            </div>
+            <div class="card-thumbnail thumb-v24">
+              <div class="thumb-v24-accent"></div>
+              <div class="thumb-content">
+                <span class="thumb-heading-v24">Meet someone new<br>over coffee</span>
+                <div class="thumb-v24-stats">
+                  <span>6+</span><span>30m</span><span>Free</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">24</div>
+            <div class="card-details">
+              <h3>Design Polish</h3>
+              <p class="card-desc">Subtle refinements everywhere: warmer card backgrounds, heading underlines, nav scroll shadow, FAQ pill toggles, form accent bar, dark footer, testimonial quote marks, and richer shadows.</p>
+              <div class="card-tags">
+                <span class="tag">Refined</span>
+                <span class="tag">Shadows</span>
+                <span class="tag">Details</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- V25 — The Final Iteration -->
+        <a href="v25/index.html" class="gallery-card card-convergence">
+          <div class="card-preview">
+            <div class="card-browser">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <span class="browser-label">Final</span>
+            </div>
+            <div class="card-thumbnail thumb-v25">
+              <div class="thumb-v25-quote-mark">&ldquo;</div>
+              <div class="thumb-content">
+                <span class="thumb-v25-label">WHAT PEOPLE ARE SAYING</span>
+                <span class="thumb-v25-quote">"Coffee Roulette pops the grad school bubble."</span>
+                <div class="thumb-v25-author">
+                  <span class="thumb-v25-avatar">ML</span>
+                  <span class="thumb-v25-name">Maria L., IIT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-number">25</div>
+            <div class="card-details">
+              <h3>The Final Iteration</h3>
+              <p class="card-desc">Testimonials section switched from dark to warm light — cohesive with the page's palette. The completed design, 25 of 25.</p>
+              <div class="card-tags">
+                <span class="tag">Final</span>
+                <span class="tag">Light Testimonials</span>
+                <span class="tag">Complete</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <h2 class="process-heading">The Design Process</h2>
+      <p class="process-intro">Every version follows the same cycle — but the output is wildly different each time.</p>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <h3>Pick a Direction</h3>
+          <p>Choose a radically different aesthetic — brutalist, retro, neon, editorial, playful. Constraint breeds creativity.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <h3>Design the System</h3>
+          <p>Define the typography, color palette, spacing, and layout rules. Every design choice should reinforce the mood.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <h3>Build It</h3>
+          <p>HTML, CSS, and JS — from scratch each time. No templates, no shortcuts. Every pixel is intentional.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <h3>Ship & Reflect</h3>
+          <p>Publish, compare against previous versions, document what worked and what didn't. Then do it again.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -230,30 +873,17 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-links">
-        <a href="mailto:your.email@example.com" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-            <rect x="2" y="9" width="4" height="12"/>
-            <circle cx="4" cy="4" r="2"/>
-          </svg>
-        </a>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-          </svg>
-        </a>
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="footer-logo">DBS</span>
+          <p>A design journal by Gurshaan Bariana</p>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2026. Built with curiosity and caffeine in Chicago.</p>
+        </div>
       </div>
-      <p>&copy; 2026 Gurshaan Bariana. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Coffee Roulette — Chicago Grad Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">&#9749; CCR</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#who">Who</a></li>
+        <li><a href="#why">Why Join</a></li>
+        <li><a href="#signup">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero__content">
+      <p class="hero__tag">&gt; SYSTEM INITIALIZED_</p>
+      <h1 class="hero__title glitch" data-text="Campus Coffee Roulette">Campus Coffee<br/>Roulette</h1>
+      <p class="hero__sub">Random coffee chats for Chicago grad students.<br/>One match. One week. One conversation that could change everything.</p>
+      <a href="#signup" class="btn btn--primary">ENTER THE NETWORK &rarr;</a>
+    </div>
+    <div class="hero__grid" aria-hidden="true"></div>
+  </header>
+
+  <!-- How It Works -->
+  <section class="section" id="how">
+    <h2 class="section__title neon-text--cyan">// HOW IT WORKS</h2>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-card__number neon-text--magenta">01</div>
+        <h3>SIGN UP</h3>
+        <p>Drop your name, university email, and program. Takes 30 seconds.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card__number neon-text--magenta">02</div>
+        <h3>GET MATCHED</h3>
+        <p>Every week our algorithm pairs you with a grad student from a different program or school.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card__number neon-text--magenta">03</div>
+        <h3>GRAB COFFEE</h3>
+        <p>Meet up at a Chicago cafe, hop on a video call, or walk the lakefront. Your call.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-card__number neon-text--magenta">04</div>
+        <h3>EXPAND</h3>
+        <p>Build a cross-campus network that goes way beyond your department.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It's For -->
+  <section class="section section--alt" id="who">
+    <h2 class="section__title neon-text--magenta">// WHO IT'S FOR</h2>
+    <p class="section__desc">Graduate &amp; professional students across Chicago's top institutions.</p>
+    <div class="schools">
+      <div class="school-chip">UChicago</div>
+      <div class="school-chip">Northwestern</div>
+      <div class="school-chip">UIC</div>
+      <div class="school-chip">Loyola</div>
+      <div class="school-chip">DePaul</div>
+      <div class="school-chip">IIT</div>
+      <div class="school-chip school-chip--other">+ Others</div>
+    </div>
+    <p class="section__note">MBA, PhD, JD, MD, MS, MFA, MPP — every program, every discipline.</p>
+  </section>
+
+  <!-- Why Join -->
+  <section class="section" id="why">
+    <h2 class="section__title neon-text--cyan">// WHY JOIN</h2>
+    <div class="reasons">
+      <div class="reason-card">
+        <div class="reason-card__icon">&#9889;</div>
+        <h3>Break the Bubble</h3>
+        <p>Grad school can be isolating. Meet people outside your lab, cohort, or campus.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-card__icon">&#128274;</div>
+        <h3>Unlock Opportunities</h3>
+        <p>Your next co-founder, collaborator, or mentor might be one coffee away.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-card__icon">&#127758;</div>
+        <h3>Cross-Pollinate Ideas</h3>
+        <p>The best insights come from combining different fields. CS meets public policy. Bio meets design.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-card__icon">&#9749;</div>
+        <h3>Zero Commitment</h3>
+        <p>One coffee per week. Skip anytime. No pressure, just good conversation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign Up -->
+  <section class="section section--alt" id="signup">
+    <h2 class="section__title neon-text--magenta">// SIGN UP</h2>
+    <p class="section__desc">Join the network. Get your first match this week.</p>
+
+    <form class="form" id="signupForm" autocomplete="off">
+      <div class="form__group">
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" placeholder="Ada Lovelace" required />
+      </div>
+      <div class="form__group">
+        <label for="email">UNIVERSITY EMAIL</label>
+        <input type="email" id="email" name="email" placeholder="you@uchicago.edu" required />
+      </div>
+      <div class="form__group">
+        <label for="university">UNIVERSITY</label>
+        <select id="university" name="university" required>
+          <option value="" disabled selected>Select your university</option>
+          <option value="UChicago">University of Chicago</option>
+          <option value="Northwestern">Northwestern University</option>
+          <option value="UIC">University of Illinois Chicago</option>
+          <option value="Loyola">Loyola University Chicago</option>
+          <option value="DePaul">DePaul University</option>
+          <option value="IIT">Illinois Institute of Technology</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label for="program">PROGRAM</label>
+        <input type="text" id="program" name="program" placeholder="MS Computer Science" required />
+      </div>
+      <button type="submit" class="btn btn--submit">TRANSMIT &rarr;</button>
+    </form>
+
+    <!-- Confirmation -->
+    <div class="confirmation" id="confirmation">
+      <div class="confirmation__inner">
+        <p class="confirmation__icon">&#10003;</p>
+        <h3>TRANSMISSION RECEIVED</h3>
+        <p>Welcome to the network. Your first match is incoming.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Campus Coffee Roulette &mdash; Chicago</p>
+    <p class="footer__sub">Built with caffeine &amp; neon.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

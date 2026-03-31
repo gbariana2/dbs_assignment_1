@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette — Networking Coffee Chats for Chicago Grad Students</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Announcement Banner -->
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <span class="announcement-badge">New</span>
+      <span>Now matching across 6 universities in Chicago</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">&#9749;</div>
+        <span>Coffee Roulette</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#signup" class="nav-cta">Get Matched</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-aurora"></div>
+    <div class="hero-content">
+      <div class="hero-pill fade-in">
+        <span class="pill-dot"></span>
+        500+ matches made this quarter
+      </div>
+      <h1 class="fade-in">Meet brilliant minds<br>over coffee.</h1>
+      <p class="hero-sub fade-in">Campus Coffee Roulette matches Chicago grad students across programs for weekly 1-on-1 coffee chats. Expand your network beyond your department — effortlessly.</p>
+      <div class="hero-actions fade-in">
+        <a href="#signup" class="btn-primary">Get Your First Match</a>
+        <a href="#how-it-works" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>
+          See How It Works
+        </a>
+      </div>
+      <div class="hero-metrics fade-in">
+        <div class="metric">
+          <span class="metric-value">2,400+</span>
+          <span class="metric-label">Students joined</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-value">6</span>
+          <span class="metric-label">Universities</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-value">94%</span>
+          <span class="metric-label">Match satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By -->
+  <section class="trusted">
+    <div class="container">
+      <p class="trusted-label fade-in">Students from leading Chicago institutions</p>
+      <div class="trusted-logos fade-in">
+        <span class="uni-logo">UChicago</span>
+        <span class="uni-logo">Northwestern</span>
+        <span class="uni-logo">UIC</span>
+        <span class="uni-logo">Loyola</span>
+        <span class="uni-logo">DePaul</span>
+        <span class="uni-logo">Illinois Tech</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Features</span>
+        <h2>Everything you need to<br>build real connections.</h2>
+        <p>No awkward mixers. No forced small talk. Just smart matching that leads to meaningful conversations.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#127922;</div>
+          <h3>Smart Matching</h3>
+          <p>Our algorithm pairs you with students from different programs who share overlapping interests — so conversations flow naturally.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#128197;</div>
+          <h3>Weekly Cadence</h3>
+          <p>Get a fresh match every week. Set your availability once and we handle the rest — including reminders and calendar invites.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#127981;</div>
+          <h3>Cross-Campus</h3>
+          <p>Break out of your department bubble. Meet MBA students, engineers, policy wonks, and researchers from across Chicago.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#128205;</div>
+          <h3>Venue Suggestions</h3>
+          <p>We suggest coffee spots equidistant between both of you. Discover the best cafés in Chicago while you network.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#128172;</div>
+          <h3>Icebreaker Prompts</h3>
+          <p>Each match comes with curated conversation starters tailored to your backgrounds — so nobody stares at their latte in silence.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#128274;</div>
+          <h3>Privacy First</h3>
+          <p>Only your first name and program are shared with matches. No social media required. Unsubscribe anytime with one click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">How It Works</span>
+        <h2>From signup to coffee<br>in three steps.</h2>
+      </div>
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Sign Up</h3>
+            <p>Create your profile in 30 seconds with your university email. Tell us your program, interests, and availability.</p>
+          </div>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Get Matched</h3>
+            <p>Every Monday morning, you receive your weekly match — a grad student from a different program with shared interests.</p>
+          </div>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Grab Coffee</h3>
+            <p>Meet up at a suggested café, use our icebreakers, and build a connection that lasts well beyond graduation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="what-you-get">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">What You Get</span>
+        <h2>100% free. Always.</h2>
+        <p>Campus Coffee Roulette is and will always be free for students. Here is what is included.</p>
+      </div>
+      <div class="benefits-grid fade-in">
+        <div class="benefit-card highlight">
+          <div class="benefit-header">
+            <span class="benefit-plan">For Students</span>
+            <div class="benefit-price">$0<span>/forever</span></div>
+          </div>
+          <ul class="benefit-list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Weekly cross-campus matches</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Smart interest-based pairing</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Curated venue suggestions</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Icebreaker conversation prompts</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Google Calendar integration</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Opt-in/out any week</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Priority matching for active users</li>
+          </ul>
+          <a href="#signup" class="btn-primary" style="width:100%;text-align:center;">Get Started Free</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Testimonials</span>
+        <h2>Loved by students<br>across Chicago.</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"I met my co-founder through Coffee Roulette. We were both working on health-tech ideas in different programs and had no idea the other existed."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AP</div>
+            <div>
+              <div class="author-name">Ananya P.</div>
+              <div class="author-info">MBA, UChicago Booth</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"As an international student, this was the easiest way to build a real network in Chicago. Every week I look forward to my new match."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JK</div>
+            <div>
+              <div class="author-name">Jun K.</div>
+              <div class="author-info">MS Computer Science, Northwestern</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"The cross-campus matching is genius. I had no reason to meet a public policy student otherwise, and now she is one of my closest friends."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Marcus R.</div>
+              <div class="author-info">PhD Biomedical Eng., IIT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signup / CTA -->
+  <section class="signup-section" id="signup">
+    <div class="container">
+      <div class="signup-wrapper fade-in">
+        <div class="signup-info">
+          <h2>Ready to meet your<br>next match?</h2>
+          <p>Join 2,400+ grad students already expanding their networks one coffee at a time. Sign up takes 30 seconds.</p>
+          <div class="signup-badges">
+            <div class="badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Free forever
+            </div>
+            <div class="badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              No spam, ever
+            </div>
+            <div class="badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Unsubscribe anytime
+            </div>
+          </div>
+        </div>
+        <form class="signup-form" id="signupForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email">University Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@uchicago.edu" required>
+          </div>
+          <div class="form-group">
+            <label for="university">University</label>
+            <select id="university" name="university" required>
+              <option value="" disabled selected>Select your university</option>
+              <option value="uchicago">University of Chicago</option>
+              <option value="northwestern">Northwestern University</option>
+              <option value="uic">University of Illinois Chicago</option>
+              <option value="loyola">Loyola University Chicago</option>
+              <option value="depaul">DePaul University</option>
+              <option value="iit">Illinois Institute of Technology</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="program">Program / Department</label>
+            <input type="text" id="program" name="program" placeholder="e.g. MBA, MS Computer Science" required>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">Get My First Match</button>
+          <p class="form-disclaimer">By signing up you agree to our Terms of Service and Privacy Policy.</p>
+        </form>
+        <!-- Confirmation -->
+        <div class="signup-confirmation" id="signupConfirmation">
+          <div class="confirmation-icon">&#9989;</div>
+          <h3>You are in!</h3>
+          <p>Check your university email for a confirmation link. Your first match drops Monday morning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">&#9749;</div>
+            <span>Coffee Roulette</span>
+          </div>
+          <p>Connecting Chicago grad students,<br>one coffee at a time.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#signup">Sign Up</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Campus Coffee Roulette. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

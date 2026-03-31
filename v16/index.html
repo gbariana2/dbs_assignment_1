@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="site-name">Campus Coffee Roulette</p>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero fade-in">
+      <div class="seal">
+        <div class="seal-inner">
+          <span class="seal-top">Chicago</span>
+          <span class="seal-icon">&amp;</span>
+          <span class="seal-middle">Graduate</span>
+          <span class="seal-middle">Coffee Chats</span>
+          <span class="seal-bottom">Est. 2026</span>
+        </div>
+      </div>
+      <h1 class="hero-title">One coffee.<br>One stranger.<br>One new perspective.</h1>
+      <p class="hero-subtitle">A quiet experiment in cross-campus connection for Chicago's graduate students.</p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- About -->
+    <section class="section fade-in">
+      <span class="section-number">01</span>
+      <h2>What This Is</h2>
+      <p>Campus Coffee Roulette pairs graduate students from different Chicago universities for one-on-one coffee conversations. No agendas, no networking scripts, no elevator pitches. Just two people from different programs, meeting over a warm drink, discovering what they didn't know they had in common.</p>
+      <p>Each month, you'll receive a single match &mdash; a name, a program, and a suggestion to meet. What happens after that is entirely up to you. Some matches become collaborators. Some become friends. All of them become a reminder that the best ideas live at the edges between disciplines.</p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- How It Works — two-column editorial -->
+    <section class="section section-wide fade-in">
+      <span class="section-number">02</span>
+      <h2>How It Works</h2>
+      <div class="two-col">
+        <div class="col-left">
+          <div class="step">
+            <span class="step-label">Sign up</span>
+            <p>Share your name, your university, and the program you're in. That's all we need. No profiles, no bios, no photos.</p>
+          </div>
+          <div class="step">
+            <span class="step-label">Get matched</span>
+            <p>On the first Monday of each month, you'll receive an email introducing you to someone from a different graduate program at a different university.</p>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="step">
+            <span class="step-label">Meet for coffee</span>
+            <p>Find a time that week. Pick a caf&eacute; roughly between your campuses. Sit down for thirty minutes. That's it &mdash; no structure, no follow-up survey.</p>
+          </div>
+          <div class="step">
+            <span class="step-label">Repeat or rest</span>
+            <p>Stay in the pool for next month's match, or pause whenever you like. There is no obligation, only invitation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Schools -->
+    <section class="section fade-in">
+      <span class="section-number">03</span>
+      <h2>The Schools</h2>
+      <p>We currently match across six Chicago-area graduate institutions, with more joining each quarter.</p>
+      <ul class="school-list">
+        <li>University of Chicago</li>
+        <li>Northwestern University</li>
+        <li>University of Illinois Chicago</li>
+        <li>Loyola University Chicago</li>
+        <li>DePaul University</li>
+        <li>Illinois Institute of Technology</li>
+      </ul>
+      <p class="small-note">Don't see your school? Select "Other" when you sign up and we'll work on adding it.</p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Pull Quote -->
+    <section class="section fade-in">
+      <blockquote class="pull-quote">
+        <p>"I came to Chicago knowing everyone in my cohort and no one outside of it. My first coffee match &mdash; a public health student at UIC &mdash; changed the way I think about my own research. We still meet every few weeks."</p>
+        <cite>&mdash; Second-year PhD student, UChicago Sociology</cite>
+      </blockquote>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Signup -->
+    <section class="section fade-in">
+      <span class="section-number">04</span>
+      <h2>Join the Table</h2>
+      <p>Enter your details below and you'll be included in the next matching round. We'll only email you about your match &mdash; nothing else, ever.</p>
+
+      <form id="signup-form" class="signup-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="email">University Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@university.edu">
+        </div>
+        <div class="form-group">
+          <label for="university">University</label>
+          <select id="university" name="university" required>
+            <option value="" disabled selected>Select your university</option>
+            <option value="uchicago">University of Chicago</option>
+            <option value="northwestern">Northwestern University</option>
+            <option value="uic">University of Illinois Chicago</option>
+            <option value="loyola">Loyola University Chicago</option>
+            <option value="depaul">DePaul University</option>
+            <option value="iit">Illinois Institute of Technology</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="program">Graduate Program</label>
+          <input type="text" id="program" name="program" required placeholder="e.g., MBA, PhD in Chemistry, MFA in Writing">
+        </div>
+        <button type="submit" class="submit-btn">Count Me In</button>
+      </form>
+
+      <div id="confirmation" class="confirmation" aria-live="polite"></div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Footer -->
+    <footer class="site-footer fade-in">
+      <p>Campus Coffee Roulette is a student-run project with no institutional affiliation.</p>
+      <p class="small-note">Chicago, Illinois &middot; Since 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

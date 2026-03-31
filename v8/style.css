@@ -1,0 +1,787 @@
+/* ============================================
+   CAMPUS COFFEE ROULETTE — v8 MANIFESTO / ZINE
+   ============================================ */
+
+:root {
+  --black: #0a0a0a;
+  --white: #f0f0e8;
+  --yellow: #FFFF00;
+  --grey: #888;
+  --bebas: 'Bebas Neue', sans-serif;
+  --elite: 'Special Elite', cursive;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+/* RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--mono);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+s {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--yellow);
+  opacity: 0.7;
+}
+
+/* YELLOW HIGHLIGHT */
+.yellow-highlight {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0 0.3em;
+  font-weight: 700;
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.fine-print {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  font-family: var(--mono);
+  letter-spacing: 0.02em;
+}
+
+/* =====================
+   NAV
+   ===================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  background: var(--black);
+  border-bottom: 2px solid var(--white);
+  mix-blend-mode: normal;
+}
+
+.nav-brand {
+  font-family: var(--bebas);
+  font-size: 1.8rem;
+  letter-spacing: 0.15em;
+  color: var(--yellow);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: var(--elite);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem 2rem;
+  position: relative;
+  background: var(--black);
+}
+
+.hero-inner {
+  max-width: 900px;
+}
+
+.hero-dateline {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  opacity: 0.5;
+  margin-bottom: 3rem;
+}
+
+.hero-title {
+  font-family: var(--bebas);
+  line-height: 0.85;
+  margin-bottom: 2rem;
+}
+
+.hero-line-1 {
+  display: block;
+  font-size: clamp(4rem, 15vw, 12rem);
+  letter-spacing: 0.08em;
+  transform: rotate(-1.5deg);
+  color: var(--white);
+}
+
+.hero-line-2 {
+  display: block;
+  font-size: clamp(4rem, 15vw, 12rem);
+  letter-spacing: 0.08em;
+  transform: rotate(0.8deg);
+  color: var(--yellow);
+  text-shadow: 4px 4px 0 var(--black), -2px -2px 0 rgba(255,255,0,0.3);
+}
+
+.hero-line-3 {
+  display: block;
+  font-size: clamp(4rem, 15vw, 12rem);
+  letter-spacing: 0.08em;
+  transform: rotate(-0.5deg);
+  color: var(--white);
+}
+
+.hero-subtitle {
+  font-family: var(--elite);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.hero-stamp {
+  display: inline-flex;
+  gap: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  opacity: 0.4;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  padding: 0.5rem 0;
+}
+
+.hero-tear {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 8px,
+    var(--white) 8px,
+    var(--white) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  opacity: 0.15;
+}
+
+/* =====================
+   PREAMBLE
+   ===================== */
+.preamble {
+  padding: 6rem 2rem;
+  background: var(--white);
+  color: var(--black);
+  position: relative;
+}
+
+.preamble-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.preamble-label {
+  font-family: var(--bebas);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  margin-bottom: 2rem;
+  opacity: 0.4;
+}
+
+.preamble-text {
+  font-family: var(--elite);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  line-height: 2;
+  border: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.preamble-text s {
+  text-decoration-color: var(--black);
+}
+
+.preamble-text strong {
+  font-size: 1.3em;
+  display: inline-block;
+  transform: rotate(-0.5deg);
+}
+
+.preamble-fine {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+
+/* =====================
+   MANIFESTO DECLARATIONS
+   ===================== */
+.manifesto {
+  padding: 6rem 2rem;
+}
+
+.manifesto-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-scream {
+  font-family: var(--bebas);
+  font-size: clamp(3rem, 10vw, 7rem);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.section-whisper {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  opacity: 0.4;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.declarations {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.declaration {
+  transform: rotate(var(--rot, 0deg));
+  padding: 2.5rem;
+  border: 2px solid var(--white);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.declaration:hover {
+  transform: rotate(0deg) scale(1.01);
+  border-color: var(--yellow);
+}
+
+.declaration:nth-child(odd) {
+  margin-right: 5%;
+}
+
+.declaration:nth-child(even) {
+  margin-left: 5%;
+}
+
+.decl-num {
+  font-family: var(--bebas);
+  font-size: 4rem;
+  color: var(--yellow);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.declaration h3 {
+  font-family: var(--bebas);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.declaration p {
+  font-family: var(--elite);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* =====================
+   HOW IT WORKS
+   ===================== */
+.how-section {
+  padding: 6rem 2rem;
+  background: var(--yellow);
+  color: var(--black);
+  position: relative;
+}
+
+.how-section .section-scream {
+  text-align: center;
+}
+
+.how-section .section-whisper {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.how-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.how-step {
+  background: var(--black);
+  color: var(--white);
+  padding: 2.5rem;
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.how-step:hover {
+  transform: rotate(0deg);
+}
+
+.step-num {
+  font-family: var(--bebas);
+  font-size: 5rem;
+  line-height: 1;
+  display: block;
+  opacity: 0.15;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.how-step h4 {
+  font-family: var(--bebas);
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+}
+
+.how-step p {
+  font-family: var(--elite);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* =====================
+   COALITION / SCHOOLS
+   ===================== */
+.coalition {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.coalition .section-whisper {
+  margin-bottom: 4rem;
+}
+
+.schools-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.school-card {
+  background: transparent;
+  border: 2px solid var(--white);
+  padding: 1.5rem 2.5rem;
+  transform: rotate(var(--rot, 0deg));
+  transition: all 0.3s;
+  text-align: center;
+  min-width: 180px;
+}
+
+.school-card:hover {
+  transform: rotate(0deg);
+  border-color: var(--yellow);
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.school-name {
+  display: block;
+  font-family: var(--bebas);
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+}
+
+.school-detail {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+  margin-top: 0.3rem;
+}
+
+.school-card:hover .school-detail {
+  opacity: 0.8;
+}
+
+.other-card {
+  border-style: dashed;
+}
+
+/* =====================
+   ENLIST / SIGNUP
+   ===================== */
+.enlist {
+  padding: 6rem 2rem;
+  background: var(--white);
+  color: var(--black);
+}
+
+.enlist-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.enlist-text .section-scream {
+  margin-bottom: 1.5rem;
+}
+
+.enlist-cta {
+  font-family: var(--elite);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.enlist-fine {
+  max-width: 380px;
+}
+
+/* Form */
+.form-container {
+  position: relative;
+  border: 3px solid var(--black);
+  padding: 2.5rem;
+  transform: rotate(0.5deg);
+}
+
+.form-stamp {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  font-family: var(--bebas);
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 2px 12px;
+  transform: rotate(-3deg);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--bebas);
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-family: var(--elite);
+  font-size: 1rem;
+  background: transparent;
+  border: 2px solid var(--black);
+  color: var(--black);
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230a0a0a' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--yellow);
+  box-shadow: 3px 3px 0 var(--yellow);
+}
+
+.form-group input::placeholder {
+  color: var(--black);
+  opacity: 0.3;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--bebas);
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:hover {
+  background: var(--yellow);
+  color: var(--black);
+  transform: rotate(-0.5deg);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Confirmation */
+.form-confirmation {
+  display: none;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.form-confirmation.visible {
+  display: block;
+}
+
+.confirm-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirm-text {
+  font-family: var(--bebas);
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+}
+
+.confirm-sub {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+.footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(240,240,232,0.15);
+}
+
+.footer-manifesto {
+  font-family: var(--bebas);
+  font-size: 1rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 0.8rem;
+  opacity: 0.5;
+}
+
+.footer-tiny {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  opacity: 0.25;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    border-bottom: 2px solid var(--white);
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 5rem;
+  }
+
+  .declaration:nth-child(odd),
+  .declaration:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .declaration {
+    padding: 1.5rem;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enlist-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .form-container {
+    transform: rotate(0deg);
+  }
+
+  .school-card {
+    min-width: 140px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-scream {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .declaration {
+    transform: rotate(0deg) !important;
+  }
+
+  .declaration:hover {
+    transform: scale(1.01) !important;
+  }
+
+  .preamble {
+    padding: 4rem 1.5rem;
+  }
+
+  .manifesto {
+    padding: 4rem 1rem;
+  }
+}
+
+/* =====================
+   ANIMATIONS / POLISH
+   ===================== */
+@keyframes stampIn {
+  0% {
+    transform: rotate(-3deg) scale(2);
+    opacity: 0;
+  }
+  70% {
+    transform: rotate(-3deg) scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-3deg) scale(1);
+  }
+}
+
+.form-stamp {
+  animation: stampIn 0.5s ease-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}

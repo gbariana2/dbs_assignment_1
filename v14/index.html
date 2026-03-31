@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette — Terminal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Matrix rain canvas -->
+<canvas id="matrix-rain"></canvas>
+
+<!-- Terminal Window -->
+<div class="terminal-window">
+  <!-- Title bar -->
+  <div class="terminal-titlebar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">bash — 80x24 — campus-coffee-roulette</div>
+    <div class="terminal-titlebar-spacer"></div>
+  </div>
+
+  <!-- Terminal body -->
+  <div class="terminal-body" id="terminal-body">
+
+    <!-- ASCII Art Logo -->
+    <pre class="ascii-logo" aria-label="Campus Coffee Roulette">
+   ██████╗ ██████╗ ███████╗███████╗███████╗███████╗
+  ██╔════╝██╔═══██╗██╔════╝██╔════╝██╔════╝██╔════╝
+  ██║     ██║   ██║█████╗  █████╗  █████╗  █████╗
+  ██║     ██║   ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══╝
+  ╚██████╗╚██████╔╝██║     ██║     ███████╗███████╗
+   ╚═════╝ ╚═════╝ ╚═╝     ╚═╝     ╚══════╝╚══════╝
+        ██████╗  ██████╗ ██╗   ██╗██╗     ███████╗████████╗████████╗███████╗
+        ██╔══██╗██╔═══██╗██║   ██║██║     ██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝
+        ██████╔╝██║   ██║██║   ██║██║     █████╗     ██║      ██║   █████╗
+        ██╔══██╗██║   ██║██║   ██║██║     ██╔══╝     ██║      ██║   ██╔══╝
+        ██║  ██║╚██████╔╝╚██████╔╝███████╗███████╗   ██║      ██║   ███████╗
+        ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚══════╝
+    </pre>
+
+    <div class="ascii-coffee">
+        ( (
+         ) )
+      .______.
+      |      |]
+      \      /
+       `----'
+    </div>
+
+    <!-- Hero typewriter -->
+    <div class="terminal-line">
+      <span class="prompt">$</span>
+      <span class="command">coffee-roulette --welcome</span>
+    </div>
+    <div class="output hero-output">
+      <span id="typewriter"></span><span class="cursor" id="hero-cursor">█</span>
+    </div>
+
+    <br>
+
+    <!-- Table of Contents -->
+    <div class="terminal-line">
+      <span class="prompt">$</span>
+      <span class="command">ls ./sections/</span>
+    </div>
+    <div class="output toc-output">
+      <a href="#help" class="toc-link">01-help.txt</a>
+      <a href="#how-it-works" class="toc-link">02-how-it-works.sh</a>
+      <a href="#schools" class="toc-link">03-schools.dir</a>
+      <a href="#stats" class="toc-link">04-stats.log</a>
+      <a href="#signup" class="toc-link">05-signup.exe</a>
+    </div>
+
+    <div class="section-divider">═══════════════════════════════════════════════════════════════</div>
+
+    <!-- HELP Section -->
+    <div id="help" class="section">
+      <div class="terminal-line">
+        <span class="prompt">$</span>
+        <span class="command">coffee-roulette --help</span>
+      </div>
+      <div class="output">
+        <div class="output-header">CAMPUS COFFEE ROULETTE(1)         User Commands         CAMPUS COFFEE ROULETTE(1)</div>
+        <br>
+        <div class="output-section-title">NAME</div>
+        <div class="output-indented">coffee-roulette — match Chicago grad students for weekly networking coffee chats</div>
+        <br>
+        <div class="output-section-title">SYNOPSIS</div>
+        <div class="output-indented">coffee-roulette [--signup] [--match] [--meet] [--repeat]</div>
+        <br>
+        <div class="output-section-title">DESCRIPTION</div>
+        <div class="output-indented">
+          Campus Coffee Roulette randomly pairs graduate students from different
+          programs and universities across Chicago for one-on-one coffee chats.
+          <br><br>
+          Break out of your department silo. Meet brilliant people you'd never
+          cross paths with. All it costs is 30 minutes and one cup of coffee.
+          <br><br>
+          <span class="highlight">New matches drop every Monday at 09:00 CST.</span>
+          <span class="highlight">100% free. Zero spam. Just coffee and conversation.</span>
+        </div>
+        <br>
+        <div class="output-section-title">OPTIONS</div>
+        <div class="output-indented">
+          <span class="flag">--cross-program</span>    Always matched outside your own department<br>
+          <span class="flag">--cross-university</span>  Prioritize matches at different schools<br>
+          <span class="flag">--flexible</span>          Meet in-person or virtual — your call<br>
+          <span class="flag">--no-awkward</span>        We send conversation starters with every match
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">═══════════════════════════════════════════════════════════════</div>
+
+    <!-- HOW IT WORKS Section -->
+    <div id="how-it-works" class="section">
+      <div class="terminal-line">
+        <span class="prompt">$</span>
+        <span class="command">coffee-roulette --how-it-works</span>
+      </div>
+      <div class="output">
+        <div class="output-header">Executing matching algorithm...</div>
+        <br>
+        <div class="step">
+          <span class="step-number">[STEP 01]</span>
+          <span class="step-command">$ ./signup.sh</span>
+          <div class="step-desc">
+            Sign up with your university email below. Takes 30 seconds.
+            We verify you're actually a grad student (no undergrads, sorry).
+          </div>
+        </div>
+        <br>
+        <div class="step">
+          <span class="step-number">[STEP 02]</span>
+          <span class="step-command">$ cron @weekly ./match.py</span>
+          <div class="step-desc">
+            Every Monday our algorithm pairs you with someone from a
+            DIFFERENT program or university. Maximum cross-pollination.
+          </div>
+        </div>
+        <br>
+        <div class="step">
+          <span class="step-number">[STEP 03]</span>
+          <span class="step-command">$ mail --notify "Your match is ready!"</span>
+          <div class="step-desc">
+            You both get an email intro with each other's name, program,
+            and 3 conversation starters. No awkward cold opens.
+          </div>
+        </div>
+        <br>
+        <div class="step">
+          <span class="step-number">[STEP 04]</span>
+          <span class="step-command">$ meet --duration=30m --location=cafe</span>
+          <div class="step-desc">
+            Grab coffee (or tea, or boba — we don't judge). Chat for 30
+            minutes. Expand your network across Chicago's grad schools.
+          </div>
+        </div>
+        <br>
+        <div class="step">
+          <span class="step-number">[STEP 05]</span>
+          <span class="step-command">$ goto STEP_02  # loop forever</span>
+          <div class="step-desc">
+            Next week, new match. Build a network that spans every campus,
+            every discipline, every corner of Chicago academia.
+          </div>
+        </div>
+        <br>
+        <div class="output-status">Process complete. Exit code: 0 (SUCCESS)</div>
+      </div>
+    </div>
+
+    <div class="section-divider">═══════════════════════════════════════════════════════════════</div>
+
+    <!-- SCHOOLS Section -->
+    <div id="schools" class="section">
+      <div class="terminal-line">
+        <span class="prompt">$</span>
+        <span class="command">ls -la /universities/chicago/</span>
+      </div>
+      <div class="output">
+        <div class="output-header">total 7 participating institutions</div>
+        <br>
+<pre class="dir-listing">drwxr-xr-x  412 students  grad  2026-03-26 09:00  <span class="dir-name">UChicago/</span>
+drwxr-xr-x  389 students  grad  2026-03-26 09:00  <span class="dir-name">Northwestern/</span>
+drwxr-xr-x  245 students  grad  2026-03-26 09:00  <span class="dir-name">UIC/</span>
+drwxr-xr-x  198 students  grad  2026-03-26 09:00  <span class="dir-name">Loyola-Chicago/</span>
+drwxr-xr-x  176 students  grad  2026-03-26 09:00  <span class="dir-name">DePaul/</span>
+drwxr-xr-x  134 students  grad  2026-03-26 09:00  <span class="dir-name">IIT/</span>
+drwxr-xr-x   52 students  grad  2026-03-26 09:00  <span class="dir-name">Other/</span></pre>
+        <br>
+        <div class="secondary-text">
+          Programs represented: Computer Science, MBA, Law, Public Policy,
+          Biomedical Engineering, Data Science, Social Work, Divinity,
+          Architecture, Chemistry, Economics, and 80+ more...
+        </div>
+        <br>
+        <div class="output-status">1,606 grad students and counting. Your campus next?</div>
+      </div>
+    </div>
+
+    <div class="section-divider">═══════════════════════════════════════════════════════════════</div>
+
+    <!-- STATS Section -->
+    <div id="stats" class="section">
+      <div class="terminal-line">
+        <span class="prompt">$</span>
+        <span class="command">coffee-roulette --stats</span>
+      </div>
+      <div class="output">
+        <div class="output-header">Reading from /var/log/coffee-roulette.log...</div>
+        <br>
+<pre class="stats-block">
+  ┌──────────────────────────────────────────────────┐
+  │                                                  │
+  │   MATCHES MADE THIS QUARTER ........ <span class="stat-value">4,218</span>       │
+  │   CUPS OF COFFEE CONSUMED .......... <span class="stat-value">8,436</span>       │
+  │   UNIVERSITIES CONNECTED ........... <span class="stat-value">    7</span>       │
+  │   PROGRAMS CROSS-POLLINATED ........ <span class="stat-value">   83</span>       │
+  │   AVERAGE CHAT LENGTH .............. <span class="stat-value">42 min</span>      │
+  │   REPEAT MEETUP RATE ............... <span class="stat-value">  67%</span>       │
+  │   COLLABS STARTED FROM MATCHES ..... <span class="stat-value">  112</span>       │
+  │                                                  │
+  └──────────────────────────────────────────────────┘
+</pre>
+      </div>
+    </div>
+
+    <div class="section-divider">═══════════════════════════════════════════════════════════════</div>
+
+    <!-- SIGNUP Section -->
+    <div id="signup" class="section">
+      <div class="terminal-line">
+        <span class="prompt">$</span>
+        <span class="command">coffee-roulette --signup</span>
+      </div>
+      <div class="output">
+        <div class="output-header">Initializing signup sequence...</div>
+        <div class="secondary-text">Please provide the following information.</div>
+        <div class="secondary-text">Press [ENTER] or click Submit to confirm.</div>
+      </div>
+
+      <br>
+
+      <form id="signup-form" class="terminal-form" autocomplete="off">
+        <div class="form-field">
+          <label class="form-prompt">
+            <span class="prompt">></span> Enter your full name:
+          </label>
+          <div class="input-line">
+            <input type="text" id="field-name" name="name" required placeholder="_ " spellcheck="false">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-prompt">
+            <span class="prompt">></span> Enter your university email (.edu):
+          </label>
+          <div class="input-line">
+            <input type="email" id="field-email" name="email" required placeholder="_ " spellcheck="false">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-prompt">
+            <span class="prompt">></span> Select your university:
+          </label>
+          <div class="input-line">
+            <select id="field-university" name="university" required>
+              <option value="" disabled selected>[ use arrow keys to select ]</option>
+              <option value="uchicago">University of Chicago (UChicago)</option>
+              <option value="northwestern">Northwestern University</option>
+              <option value="uic">University of Illinois Chicago (UIC)</option>
+              <option value="loyola">Loyola University Chicago</option>
+              <option value="depaul">DePaul University</option>
+              <option value="iit">Illinois Institute of Technology (IIT)</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-prompt">
+            <span class="prompt">></span> Enter your graduate program:
+          </label>
+          <div class="input-line">
+            <input type="text" id="field-program" name="program" required placeholder="_ " spellcheck="false">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="form-submit-line">
+          <span class="prompt">$</span>
+          <button type="submit" class="submit-btn">./submit --confirm<span class="cursor">█</span></button>
+        </div>
+      </form>
+
+      <!-- Success message (hidden by default) -->
+      <div id="signup-success" class="signup-success hidden">
+        <br>
+        <div class="output">
+          <span class="success-text">[SUCCESS]</span> Registration complete.
+          <br><br>
+<pre class="success-block">
+  ┌────────────────────────────────────────────────┐
+  │                                                │
+  │   ✓ Account created successfully               │
+  │   ✓ Added to matching pool                     │
+  │   ✓ Confirmation email dispatched              │
+  │                                                │
+  │   Your first match arrives Monday at 09:00 CST │
+  │                                                │
+  │   Welcome to Campus Coffee Roulette.           │
+  │   Time to break out of your silo.              │
+  │                                                │
+  └────────────────────────────────────────────────┘
+</pre>
+        </div>
+        <br>
+        <div class="terminal-line">
+          <span class="prompt">$</span>
+          <span class="command reset-link" id="reset-btn">coffee-roulette --new-signup</span>
+          <span class="secondary-text"> (click to register another student)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">═══════════════════════════════════════════════════════════════</div>
+
+    <!-- Footer -->
+    <div class="terminal-footer">
+      <div class="terminal-line">
+        <span class="prompt">$</span>
+        <span class="command">echo $FOOTER</span>
+      </div>
+      <div class="output secondary-text">
+        Campus Coffee Roulette v2.4.1 | Chicago, IL
+        <br>
+        Built with caffeine and good intentions.
+        <br>
+        <br>
+        <span class="dim-text">© 2026 Campus Coffee Roulette. All rights reserved.</span>
+        <br>
+        <span class="dim-text">Questions? $ mail admin@campuscoffeeroulette.com</span>
+      </div>
+      <br>
+      <div class="terminal-line">
+        <span class="prompt">$</span>
+        <span class="cursor">█</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

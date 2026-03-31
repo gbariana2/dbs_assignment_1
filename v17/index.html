@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+
+    <!-- Title -->
+    <section class="section section-title fade-in">
+      <div class="thin-circle" aria-hidden="true"></div>
+      <p class="section-label">Chicago Graduate Programs</p>
+      <h1>Campus Coffee<br>Roulette</h1>
+      <p class="subtitle">A quiet way to meet someone new<br>over a cup of coffee.</p>
+    </section>
+
+    <div class="divider fade-in"></div>
+
+    <!-- Intro -->
+    <section class="section fade-in">
+      <p class="section-label">The idea</p>
+      <h2>One conversation can<br>change everything</h2>
+      <p class="body-text">
+        Graduate school can feel solitary. You spend years immersed in your discipline, surrounded by brilliant people in other programs you may never meet. Campus Coffee Roulette gently changes that.
+      </p>
+      <p class="body-text">
+        Each week, we pair one grad student with another from a different program, a different school, a different world of thought. You meet for coffee. That's it. No agenda, no networking pretense — just two curious people sharing an hour.
+      </p>
+    </section>
+
+    <div class="divider fade-in"></div>
+
+    <!-- How It Works — Two Column Moment -->
+    <section class="section section-wide fade-in">
+      <p class="section-label">How it works</p>
+      <h2>Three simple steps</h2>
+      <div class="two-column">
+        <div class="column-left">
+          <div class="step">
+            <span class="step-number">1</span>
+            <p class="step-text">Sign up with your university email below. Tell us your name, your school, and your program. That's all we need.</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <p class="step-text">Each Monday, you receive an email introducing you to your match — a graduate student from a different program somewhere across Chicago.</p>
+          </div>
+        </div>
+        <div class="column-right">
+          <div class="step">
+            <span class="step-number">3</span>
+            <p class="step-text">You find a time, pick a cafe, and meet for coffee. The conversation is yours — we simply open the door.</p>
+          </div>
+          <blockquote class="pull-quote">
+            "The best conversations happen<br>between people who would never<br>otherwise meet."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider fade-in"></div>
+
+    <!-- Schools -->
+    <section class="section fade-in">
+      <p class="section-label">Participating schools</p>
+      <h2>Across the city</h2>
+      <p class="body-text schools-list">
+        University of Chicago&ensp;&middot;&ensp;Northwestern University&ensp;&middot;&ensp;University of Illinois Chicago&ensp;&middot;&ensp;Loyola University Chicago&ensp;&middot;&ensp;DePaul University&ensp;&middot;&ensp;Illinois Institute of Technology
+      </p>
+      <p class="body-text">
+        From Hyde Park to Evanston, from the Loop to Lincoln Park. Every graduate program, every discipline, every curious mind.
+      </p>
+    </section>
+
+    <div class="divider fade-in"></div>
+
+    <!-- Sign Up -->
+    <section class="section fade-in">
+      <p class="section-label">Join us</p>
+      <h2>Sign up</h2>
+      <p class="body-text">
+        It takes thirty seconds. We'll send your first match next Monday.
+      </p>
+
+      <form id="signup-form" autocomplete="off">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">University email</label>
+          <input type="email" id="email" name="email" required placeholder="you@university.edu">
+        </div>
+
+        <div class="form-group">
+          <label for="university">University</label>
+          <select id="university" name="university" required>
+            <option value="" disabled selected>Select your university</option>
+            <option value="uchicago">University of Chicago</option>
+            <option value="northwestern">Northwestern University</option>
+            <option value="uic">University of Illinois Chicago</option>
+            <option value="loyola">Loyola University Chicago</option>
+            <option value="depaul">DePaul University</option>
+            <option value="iit">Illinois Institute of Technology</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="program">Your program</label>
+          <input type="text" id="program" name="program" required placeholder="e.g., PhD in Comparative Literature">
+        </div>
+
+        <button type="submit" id="submit-btn">I'd like a coffee chat</button>
+      </form>
+
+      <div id="confirmation" class="confirmation" aria-live="polite">
+        <p>Thank you. Your first match is on its way.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fade-in">
+      <div class="divider"></div>
+      <p class="footer-text">Campus Coffee Roulette &middot; Chicago &middot; 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

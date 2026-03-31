@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&family=Noto+Serif:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Quiet top bar -->
+  <nav class="top-bar">
+    <span class="top-bar__mark">&#9675;</span>
+    <span class="top-bar__title">Campus Coffee Roulette</span>
+  </nav>
+
+  <!-- Vertical decorative accents -->
+  <div class="vertical-accent vertical-accent--left" aria-hidden="true">
+    <span>珈琲 &middot; 出会い &middot; 静寂</span>
+  </div>
+  <div class="vertical-accent vertical-accent--right" aria-hidden="true">
+    <span>一期一会</span>
+  </div>
+
+  <!-- Section: Intro / Hero -->
+  <section class="section section--hero fade-in">
+    <div class="hero__enso" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__marker">&#8212;</p>
+      <h1 class="hero__title">Campus<br>Coffee<br>Roulette</h1>
+      <p class="hero__subtitle">A quiet space for Chicago graduate students<br>to meet over coffee, across programs and disciplines.</p>
+      <p class="hero__cta">
+        <a href="#signup" class="link-quiet">Join the next round &darr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Brush stroke divider -->
+  <div class="brush-divider" aria-hidden="true"></div>
+
+  <!-- Section: What It Is -->
+  <section class="section section--what fade-in">
+    <div class="section__inner section__inner--offset-right">
+      <span class="section__number">01</span>
+      <h2 class="section__heading">What it is</h2>
+      <p class="section__body">
+        Campus Coffee Roulette pairs you with a fellow graduate student
+        from another Chicago program &mdash; someone you would never meet
+        in your own department. No agenda. No pressure. Just coffee and
+        conversation, honoring the Japanese idea of
+        <em>ichigo ichie</em>&thinsp;: one time, one meeting.
+      </p>
+      <p class="section__body section__body--quiet">
+        Like the wabi-sabi aesthetic, the beauty is in the unplanned &mdash;
+        the imperfect encounter that becomes meaningful.
+      </p>
+    </div>
+  </section>
+
+  <div class="brush-divider brush-divider--short" aria-hidden="true"></div>
+
+  <!-- Section: How It Works -->
+  <section class="section section--how fade-in">
+    <div class="section__inner section__inner--offset-left">
+      <span class="section__number">02</span>
+      <h2 class="section__heading">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step__mark">&#9711;</span>
+          <div>
+            <h3 class="step__title">Sign up</h3>
+            <p class="step__desc">Add your name, university, and program. Takes thirty seconds.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__mark">&#9711;</span>
+          <div>
+            <h3 class="step__title">Get matched</h3>
+            <p class="step__desc">Each round, we pair you with someone from a different graduate program across Chicago.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__mark">&#9711;</span>
+          <div>
+            <h3 class="step__title">Meet for coffee</h3>
+            <p class="step__desc">You receive an introduction email. Pick a caf&eacute;, pick a time, and show up. That&rsquo;s it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="brush-divider" aria-hidden="true"></div>
+
+  <!-- Section: Chicago Schools -->
+  <section class="section section--schools fade-in">
+    <div class="section__inner section__inner--center">
+      <span class="section__number">03</span>
+      <h2 class="section__heading">Graduate programs across Chicago</h2>
+      <p class="section__body">
+        We connect students from programs across the city &mdash;
+        bridging campuses, disciplines, and perspectives.
+      </p>
+      <ul class="school-list">
+        <li class="school-list__item">University of Chicago</li>
+        <li class="school-list__item">Northwestern University</li>
+        <li class="school-list__item">University of Illinois Chicago</li>
+        <li class="school-list__item">Loyola University Chicago</li>
+        <li class="school-list__item">DePaul University</li>
+        <li class="school-list__item">Illinois Institute of Technology</li>
+      </ul>
+      <p class="section__body section__body--quiet">
+        Don&rsquo;t see your school? Sign up anyway &mdash; we&rsquo;re growing.
+      </p>
+    </div>
+  </section>
+
+  <div class="brush-divider brush-divider--short" aria-hidden="true"></div>
+
+  <!-- Section: Signup Form -->
+  <section class="section section--signup fade-in" id="signup">
+    <div class="section__inner section__inner--offset-right">
+      <span class="section__number">04</span>
+      <h2 class="section__heading">Join the next round</h2>
+      <p class="section__body">
+        Leave your details below. We&rsquo;ll be in touch when the next matching round begins.
+      </p>
+
+      <form class="form" id="signup-form" novalidate>
+        <div class="form__group">
+          <label class="form__label" for="name">Name</label>
+          <input class="form__input" type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="email">University email</label>
+          <input class="form__input" type="email" id="email" name="email" required autocomplete="email" placeholder="you@university.edu">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="university">University</label>
+          <select class="form__input form__select" id="university" name="university" required>
+            <option value="" disabled selected>Select your university</option>
+            <option value="uchicago">University of Chicago</option>
+            <option value="northwestern">Northwestern University</option>
+            <option value="uic">University of Illinois Chicago</option>
+            <option value="loyola">Loyola University Chicago</option>
+            <option value="depaul">DePaul University</option>
+            <option value="iit">Illinois Institute of Technology</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="program">Program</label>
+          <input class="form__input" type="text" id="program" name="program" required placeholder="e.g. MBA, PhD Computer Science">
+        </div>
+
+        <button class="form__submit" type="submit">Submit</button>
+      </form>
+
+      <!-- Confirmation message -->
+      <div class="confirmation" id="confirmation" hidden>
+        <div class="confirmation__enso" aria-hidden="true"></div>
+        <p class="confirmation__text">Thank you. We&rsquo;ll be in touch&thinsp;&mdash;&thinsp;enjoy the wait.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer fade-in">
+    <div class="brush-divider" aria-hidden="true"></div>
+    <p class="footer__text">Campus Coffee Roulette &middot; Chicago &middot; 2026</p>
+    <p class="footer__text footer__text--quiet">一期一会 &mdash; one time, one meeting</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

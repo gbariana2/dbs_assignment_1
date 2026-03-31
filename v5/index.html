@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette — Chicago Grad Student Networking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">&#9749; Coffee Roulette</a>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#schools">Schools</a></li>
+      <li><a href="#why">Why Join</a></li>
+      <li><a href="#signup" class="nav__cta">Sign Up!</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero__shapes" aria-hidden="true">
+      <div class="shape shape--circle shape--1"></div>
+      <div class="shape shape--triangle shape--2"></div>
+      <div class="shape shape--circle shape--3"></div>
+      <div class="shape shape--squiggle shape--4"></div>
+      <div class="shape shape--dot-grid shape--5"></div>
+      <div class="shape shape--triangle shape--6"></div>
+      <div class="shape shape--circle shape--7"></div>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Meet Someone<br>
+        <span class="hero__highlight">Totally Random.</span><br>
+        Over Coffee.
+      </h1>
+      <p class="hero__sub">We match Chicago grad students across programs for casual 1-on-1 coffee chats. No awkward networking events. Just good vibes and caffeine.</p>
+      <a href="#signup" class="btn btn--big btn--wiggle">Spin the Wheel &rarr;</a>
+    </div>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <h2 class="section-title">How It Works</h2>
+    <div class="how__grid">
+      <div class="how__card how__card--pink">
+        <div class="how__number">1</div>
+        <h3>Sign Up</h3>
+        <p>Drop your name, school &amp; program. Takes 30 seconds — we timed it.</p>
+      </div>
+      <div class="how__card how__card--blue">
+        <div class="how__number">2</div>
+        <h3>Get Matched</h3>
+        <p>Every week we randomly pair you with a grad student from a <em>different</em> program.</p>
+      </div>
+      <div class="how__card how__card--green">
+        <div class="how__number">3</div>
+        <h3>Grab Coffee</h3>
+        <p>Meet up, swap stories, maybe discover your next collab or best friend.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOOLS -->
+  <section class="schools" id="schools">
+    <h2 class="section-title section-title--dark">Chicago Grad Schools We Love</h2>
+    <p class="schools__intro">Students from all these programs (and more!) are spinning the roulette wheel.</p>
+    <div class="schools__grid">
+      <div class="school-chip">UChicago</div>
+      <div class="school-chip">Northwestern</div>
+      <div class="school-chip">UIC</div>
+      <div class="school-chip">Loyola</div>
+      <div class="school-chip">DePaul</div>
+      <div class="school-chip">IIT</div>
+      <div class="school-chip school-chip--wild">Your School?</div>
+    </div>
+  </section>
+
+  <!-- WHY JOIN -->
+  <section class="why" id="why">
+    <h2 class="section-title">Why Join?</h2>
+    <div class="why__grid">
+      <div class="why__item">
+        <div class="why__icon">&#127760;</div>
+        <h3>Break Your Bubble</h3>
+        <p>Meet people outside your department, building, or even campus. Fresh perspectives await.</p>
+      </div>
+      <div class="why__item">
+        <div class="why__icon">&#9889;</div>
+        <h3>Zero Pressure</h3>
+        <p>It's coffee, not a job interview. Show up as yourself — messy bun and all.</p>
+      </div>
+      <div class="why__item">
+        <div class="why__icon">&#129309;</div>
+        <h3>Real Connections</h3>
+        <p>Some of the best opportunities start with "So, what are you working on?"</p>
+      </div>
+      <div class="why__item">
+        <div class="why__icon">&#127881;</div>
+        <h3>It's Free</h3>
+        <p>We're grad students too. We get it. This costs exactly $0.00 forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section class="signup" id="signup">
+    <div class="signup__deco" aria-hidden="true">
+      <div class="shape shape--circle shape--s1"></div>
+      <div class="shape shape--triangle shape--s2"></div>
+      <div class="shape shape--squiggle shape--s3"></div>
+    </div>
+    <h2 class="section-title section-title--dark">Join the Roulette!</h2>
+    <p class="signup__sub">Fill this out. We'll match you with someone awesome.</p>
+    <form class="form" id="signupForm" novalidate>
+      <div class="form__group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Jordan Rivera" required>
+      </div>
+      <div class="form__group">
+        <label for="email">University Email</label>
+        <input type="email" id="email" name="email" placeholder="you@university.edu" required>
+      </div>
+      <div class="form__group">
+        <label for="university">University</label>
+        <select id="university" name="university" required>
+          <option value="" disabled selected>Pick your school</option>
+          <option value="UChicago">University of Chicago</option>
+          <option value="Northwestern">Northwestern University</option>
+          <option value="UIC">University of Illinois Chicago</option>
+          <option value="Loyola">Loyola University Chicago</option>
+          <option value="DePaul">DePaul University</option>
+          <option value="IIT">Illinois Institute of Technology</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label for="program">Program / Department</label>
+        <input type="text" id="program" name="program" placeholder="e.g. MS Computer Science" required>
+      </div>
+      <button type="submit" class="btn btn--submit btn--wiggle">Spin Me In! &#9749;</button>
+    </form>
+    <div class="form__confirmation" id="confirmation">
+      <div class="confirmation__inner">
+        <span class="confirmation__emoji">&#127881;</span>
+        <h3>You're In!</h3>
+        <p>Check your email — your first match is coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&#9749; Campus Coffee Roulette &middot; Made with caffeine &amp; chaos in Chicago</p>
+    <div class="footer__dots" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

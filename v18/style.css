@@ -1,0 +1,379 @@
+/* ============================================
+   Campus Coffee Roulette — V18
+   The final convergence. Refined.
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --paper: #f4f1eb;
+  --ink: #2a2420;
+  --clay: #a0724e;
+  --clay-light: rgba(160, 114, 78, 0.12);
+  --column: 620px;
+  --section-gap: 100px;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  line-height: 1.75;
+  padding: 0 24px;
+}
+
+/* ---- Layout ---- */
+
+main {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--section-gap);
+}
+
+.hero-icon {
+  color: var(--clay);
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.hero-line {
+  font-style: italic;
+  font-size: 1.05rem;
+  opacity: 0.65;
+}
+
+/* ---- Standardized divider ---- */
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background-color: var(--clay);
+  opacity: 0.35;
+  margin: 0 auto var(--section-gap) auto;
+}
+
+/* ---- Sections ---- */
+
+.section {
+  margin-bottom: var(--section-gap);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.section-header.centered {
+  justify-content: center;
+}
+
+.section-icon {
+  color: var(--clay);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.section p {
+  margin-bottom: 20px;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.aside {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-top: 28px;
+}
+
+/* ---- Steps ---- */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 8px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-icon {
+  color: var(--clay);
+  flex-shrink: 0;
+  margin-top: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clay-light);
+  border-radius: 8px;
+}
+
+.step strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  opacity: 0.75;
+}
+
+/* ---- Schools ---- */
+
+.schools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.school {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--clay);
+  border: 1px solid rgba(160, 114, 78, 0.3);
+  padding: 5px 14px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.school:hover {
+  background: var(--clay-light);
+  border-color: var(--clay);
+}
+
+/* ---- Pull quote ---- */
+
+.pullquote {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.pullquote-icon {
+  color: var(--clay);
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.pullquote p {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+/* ---- Form ---- */
+
+.form-section {
+  margin-bottom: 0;
+}
+
+.form-intro {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 36px;
+}
+
+form {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 28px;
+}
+
+.field input,
+.field select {
+  display: block;
+  width: 100%;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(42, 36, 32, 0.2);
+  padding: 10px 0;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.field select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a0724e' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  padding-right: 20px;
+}
+
+.field input:focus,
+.field select:focus {
+  border-bottom-color: var(--clay);
+}
+
+.field input::placeholder {
+  color: var(--ink);
+  opacity: 0.3;
+}
+
+.field select option[disabled] {
+  color: rgba(42, 36, 32, 0.3);
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 36px auto 0 auto;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.85rem;
+  color: #fff;
+  background: var(--clay);
+  border: none;
+  cursor: pointer;
+  padding: 12px 36px;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.thank-you {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 32px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  color: var(--clay);
+}
+
+.thank-you.visible {
+  opacity: 0.8;
+}
+
+/* ---- Footer ---- */
+
+footer {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: 40px 0 80px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.75rem;
+  opacity: 0.3;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Fade in ---- */
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 680px) {
+  html {
+    font-size: 16px;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  :root {
+    --section-gap: 72px;
+  }
+}
+
+@media (max-width: 440px) {
+  html {
+    font-size: 15px;
+  }
+
+  main {
+    padding-top: 64px;
+  }
+
+  .hero h1 {
+    font-size: 1.65rem;
+  }
+
+  :root {
+    --section-gap: 56px;
+  }
+
+  body {
+    padding: 0 20px;
+  }
+
+  .step {
+    gap: 12px;
+  }
+}

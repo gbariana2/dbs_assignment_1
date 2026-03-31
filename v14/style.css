@@ -1,0 +1,572 @@
+/* ============================================
+   CAMPUS COFFEE ROULETTE — TERMINAL THEME
+   ============================================ */
+
+:root {
+  --green: #00ff41;
+  --green-dim: #338833;
+  --green-bright: #39ff14;
+  --amber: #ffb000;
+  --bg: #0a0a0a;
+  --bg-light: #111111;
+  --bg-titlebar: #1a1a1a;
+  --text-white: #cccccc;
+  --text-dim: #555555;
+  --red: #ff5f56;
+  --yellow: #ffbd2e;
+  --dot-green: #27c93f;
+  --font: 'Fira Code', monospace;
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--green);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+  background: var(--green);
+  color: var(--bg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-dim);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}
+
+/* ============================================
+   MATRIX RAIN BACKGROUND
+   ============================================ */
+
+#matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* ============================================
+   TERMINAL WINDOW
+   ============================================ */
+
+.terminal-window {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 20px auto;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 0 40px rgba(0, 255, 65, 0.05),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Bar */
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  background: var(--bg-titlebar);
+  padding: 10px 16px;
+  border-bottom: 1px solid #333;
+  user-select: none;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red { background: var(--red); }
+.dot-yellow { background: var(--yellow); }
+.dot-green { background: var(--dot-green); }
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-dim);
+  font-family: var(--font);
+}
+
+.terminal-titlebar-spacer {
+  width: 52px;
+}
+
+/* Terminal Body */
+.terminal-body {
+  background: var(--bg);
+  padding: 24px;
+  min-height: 80vh;
+}
+
+/* ============================================
+   ASCII ART
+   ============================================ */
+
+.ascii-logo {
+  color: var(--green);
+  font-size: 8px;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 8px;
+  overflow-x: auto;
+}
+
+.ascii-coffee {
+  color: var(--green-dim);
+  font-family: var(--font);
+  white-space: pre;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+/* ============================================
+   TERMINAL LINES & OUTPUT
+   ============================================ */
+
+.terminal-line {
+  margin-bottom: 4px;
+}
+
+.prompt {
+  color: var(--green-bright);
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.command {
+  color: var(--text-white);
+}
+
+.output {
+  padding: 8px 0 8px 20px;
+  color: var(--green);
+}
+
+.output-header {
+  color: var(--amber);
+  margin-bottom: 4px;
+}
+
+.output-section-title {
+  color: var(--green-bright);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.output-indented {
+  padding-left: 20px;
+  color: var(--green);
+}
+
+.output-status {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.highlight {
+  color: var(--green-bright);
+  display: block;
+  margin-top: 4px;
+}
+
+.flag {
+  color: var(--amber);
+}
+
+.secondary-text {
+  color: var(--green-dim);
+}
+
+.dim-text {
+  color: var(--text-dim);
+}
+
+/* ============================================
+   CURSOR
+   ============================================ */
+
+.cursor {
+  display: inline-block;
+  color: var(--green);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero-output {
+  font-size: 14px;
+  min-height: 120px;
+  color: var(--green);
+}
+
+/* ============================================
+   TABLE OF CONTENTS
+   ============================================ */
+
+.toc-output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 8px 0 8px 20px;
+}
+
+.toc-link {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.toc-link:hover {
+  color: var(--green-bright);
+  text-decoration: underline;
+}
+
+/* ============================================
+   SECTION DIVIDER
+   ============================================ */
+
+.section-divider {
+  color: var(--text-dim);
+  margin: 32px 0;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+.section {
+  scroll-margin-top: 20px;
+}
+
+/* Steps */
+.step {
+  padding-left: 4px;
+}
+
+.step-number {
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.step-command {
+  color: var(--text-white);
+  margin-left: 8px;
+}
+
+.step-desc {
+  padding-left: 20px;
+  color: var(--green-dim);
+  margin-top: 4px;
+}
+
+/* Directory listing */
+.dir-listing {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--green-dim);
+  overflow-x: auto;
+}
+
+.dir-name {
+  color: var(--green-bright);
+  font-weight: 600;
+}
+
+/* Stats */
+.stats-block {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--green-dim);
+}
+
+.stat-value {
+  color: var(--green-bright);
+  font-weight: 700;
+}
+
+/* ============================================
+   SIGNUP FORM
+   ============================================ */
+
+.terminal-form {
+  padding-left: 20px;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-prompt {
+  display: block;
+  color: var(--green);
+  margin-bottom: 4px;
+  cursor: default;
+}
+
+.form-prompt .prompt {
+  color: var(--amber);
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.input-line input,
+.input-line select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--green-dim);
+  color: var(--green-bright);
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 6px 4px;
+  width: 100%;
+  max-width: 450px;
+  outline: none;
+  caret-color: var(--green);
+  transition: border-color 0.2s;
+}
+
+.input-line input::placeholder {
+  color: var(--text-dim);
+}
+
+.input-line input:focus,
+.input-line select:focus {
+  border-bottom-color: var(--green);
+}
+
+.input-line select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: none;
+}
+
+.input-line select option {
+  background: var(--bg-light);
+  color: var(--green);
+  font-family: var(--font);
+}
+
+/* Submit button */
+.form-submit-line {
+  display: flex;
+  align-items: center;
+}
+
+.submit-btn {
+  background: transparent;
+  border: 1px solid var(--green-dim);
+  color: var(--green);
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submit-btn:hover {
+  background: var(--green);
+  color: var(--bg);
+  border-color: var(--green);
+}
+
+.submit-btn:hover .cursor {
+  color: var(--bg);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Success message */
+.signup-success {
+  padding-left: 20px;
+}
+
+.signup-success.hidden {
+  display: none;
+}
+
+.success-text {
+  color: var(--green-bright);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.success-block {
+  color: var(--green);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.reset-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--text-white);
+}
+
+.reset-link:hover {
+  color: var(--green-bright);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.terminal-footer {
+  margin-top: 16px;
+}
+
+/* ============================================
+   LOADING/PROCESSING ANIMATION
+   ============================================ */
+
+.processing {
+  color: var(--amber);
+}
+
+.processing::after {
+  content: '';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  .terminal-window {
+    margin: 10px;
+    border-radius: 6px;
+  }
+
+  .terminal-body {
+    padding: 16px 12px;
+  }
+
+  .ascii-logo {
+    font-size: 5px;
+  }
+
+  .terminal-title {
+    font-size: 10px;
+  }
+
+  .toc-output {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .section-divider {
+    margin: 20px 0;
+  }
+
+  .input-line input,
+  .input-line select {
+    max-width: 100%;
+  }
+
+  .terminal-form {
+    padding-left: 8px;
+  }
+
+  .dir-listing {
+    font-size: 10px;
+  }
+
+  .stats-block {
+    font-size: 11px;
+  }
+
+  .output-indented {
+    padding-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ascii-logo {
+    font-size: 3.5px;
+    line-height: 1;
+  }
+
+  .terminal-body {
+    padding: 12px 8px;
+  }
+
+  .output {
+    padding-left: 8px;
+  }
+
+  .stats-block {
+    font-size: 9px;
+  }
+
+  .success-block {
+    font-size: 10px;
+  }
+}

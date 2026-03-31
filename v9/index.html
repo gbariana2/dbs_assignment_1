@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Coffee Roulette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+
+    <header class="fade-in">
+      <p class="small-title">Campus Coffee Roulette</p>
+    </header>
+
+    <section class="fade-in">
+      <p>Hello, friend.</p>
+      <p>
+        Graduate school can feel vast and solitary — long hours in the library,
+        the quiet hum of a lab at midnight, entire semesters passing inside
+        one building. It doesn't have to be that way.
+      </p>
+    </section>
+
+    <hr class="divider fade-in">
+
+    <section class="fade-in">
+      <p>
+        Campus Coffee Roulette is a simple idea: every two weeks, we pair you
+        with another grad student from a different program somewhere across
+        Chicago. You meet for coffee. That's it.
+      </p>
+      <p>
+        No agenda, no networking pressure, no icebreaker games. Just two people,
+        two cups of coffee, and a conversation that wouldn't have happened
+        otherwise.
+      </p>
+    </section>
+
+    <hr class="divider fade-in">
+
+    <section class="fade-in">
+      <h2>How it works</h2>
+      <p>
+        You sign up with your name and university email. Every other Friday,
+        you receive a short, quiet email introducing you to your match —
+        their name, their program, and a few suggested coffee spots
+        between your campuses.
+      </p>
+      <p>
+        You reach out. You find a time. You sit down together. The rest
+        takes care of itself.
+      </p>
+    </section>
+
+    <hr class="divider fade-in">
+
+    <section class="fade-in">
+      <h2>Who it's for</h2>
+      <p>
+        Graduate students at any of Chicago's universities — UChicago,
+        Northwestern, UIC, Loyola, DePaul, Illinois Tech, and beyond.
+        Master's students, PhD candidates, MBA cohorts, law students,
+        medical residents. Anyone still learning.
+      </p>
+      <p>
+        We match across programs intentionally. A philosopher meets an
+        engineer. A public health researcher sits down with someone
+        studying poetry. The best conversations happen at the edges
+        of disciplines.
+      </p>
+    </section>
+
+    <hr class="divider fade-in">
+
+    <section class="fade-in">
+      <h2>Join us</h2>
+      <p>
+        If this sounds like something you'd enjoy, leave your details below.
+        We'll be in touch.
+      </p>
+
+      <form id="signup-form" autocomplete="off">
+        <div class="form-field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="email">University email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-field">
+          <label for="university">University</label>
+          <select id="university" name="university" required>
+            <option value="" disabled selected></option>
+            <option value="uchicago">University of Chicago</option>
+            <option value="northwestern">Northwestern University</option>
+            <option value="uic">University of Illinois Chicago</option>
+            <option value="loyola">Loyola University Chicago</option>
+            <option value="depaul">DePaul University</option>
+            <option value="iit">Illinois Institute of Technology</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="program">Your program</label>
+          <input type="text" id="program" name="program" placeholder="e.g., PhD in Comparative Literature" required>
+        </div>
+
+        <button type="submit">Sign up</button>
+      </form>
+
+      <div id="thank-you" class="thank-you" aria-live="polite">
+        <p>Thank you. We'll be in touch soon.</p>
+      </div>
+    </section>
+
+    <footer class="fade-in">
+      <hr class="divider">
+      <p>Campus Coffee Roulette — Chicago, 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

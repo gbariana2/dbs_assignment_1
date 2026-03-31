@@ -1,0 +1,362 @@
+/* =========================================
+   Campus Coffee Roulette — V17
+   Elegant Calm
+   ========================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f6f3ee;
+  --text: #2c2c2c;
+  --accent: #6b3a3a;
+  --font: 'Cormorant Garamond', Georgia, serif;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 300;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.75;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 80px 24px 60px;
+}
+
+/* ---- Sections ---- */
+
+.section {
+  padding: 50px 0;
+}
+
+.section-wide {
+  max-width: 720px;
+  margin-left: calc((640px - 720px) / 2);
+  margin-right: calc((640px - 720px) / 2);
+}
+
+/* ---- Section Labels ---- */
+
+.section-label {
+  font-size: 0.778rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+/* ---- Headings ---- */
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+/* ---- Body Text ---- */
+
+.subtitle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.body-text {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.body-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Divider ---- */
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background-color: var(--accent);
+  margin: 50px auto;
+  opacity: 0.5;
+}
+
+/* ---- Thin Circle (V3 nod) ---- */
+
+.thin-circle {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.25;
+  margin-bottom: 32px;
+}
+
+/* ---- Two-Column Layout ---- */
+
+.two-column {
+  display: flex;
+  gap: 60px;
+  margin-top: 12px;
+}
+
+.column-left,
+.column-right {
+  flex: 1;
+}
+
+.step {
+  margin-bottom: 32px;
+}
+
+.step-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.step-text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+/* ---- Pull Quote ---- */
+
+.pull-quote {
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--accent);
+  border-left: 1px solid var(--accent);
+  padding-left: 20px;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+/* ---- Schools List ---- */
+
+.schools-list {
+  font-weight: 400;
+  text-align: center;
+  line-height: 2;
+}
+
+/* ---- Form ---- */
+
+form {
+  margin-top: 40px;
+  max-width: 440px;
+}
+
+.form-group {
+  margin-bottom: 32px;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  font-family: var(--font);
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(44, 44, 44, 0.25);
+  padding: 8px 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b3a3a' opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  padding-right: 24px;
+}
+
+input:focus,
+select:focus {
+  border-bottom-color: var(--accent);
+}
+
+input::placeholder {
+  color: var(--text);
+  opacity: 0.3;
+  font-weight: 300;
+}
+
+button[type="submit"] {
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  padding: 14px 36px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.02em;
+  margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+/* ---- Confirmation ---- */
+
+.confirmation {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease;
+  margin-top: 40px;
+}
+
+.confirmation.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.confirmation p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* ---- Footer ---- */
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--text);
+  opacity: 0.4;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Fade In ---- */
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 800px) {
+  .section-wide {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 60px 20px 40px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .divider {
+    margin: 40px auto;
+  }
+
+  .two-column {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pull-quote {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .thin-circle {
+    width: 64px;
+    height: 64px;
+  }
+}

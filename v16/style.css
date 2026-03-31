@@ -1,0 +1,464 @@
+/* ============================================
+   Campus Coffee Roulette — V16: Warm Editorial
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #f5f0e8;
+  --espresso: #3d2b1f;
+  --terracotta: #b8644c;
+  --espresso-light: rgba(61, 43, 31, 0.15);
+  --terracotta-light: rgba(184, 100, 76, 0.25);
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  background-color: var(--cream);
+  color: var(--espresso);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Site Header --- */
+.site-header {
+  text-align: center;
+  padding: 48px 24px 0;
+}
+
+.site-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+
+/* --- Main Container --- */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* --- Sections --- */
+.section {
+  padding: 80px 0;
+}
+
+.section-wide {
+  max-width: 720px;
+}
+
+/* --- Section Numbers --- */
+.section-number {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+/* --- Headings --- */
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+
+/* --- Body Text --- */
+.section > p {
+  margin-bottom: 20px;
+  max-width: 620px;
+}
+
+.section > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.small-note {
+  font-size: 0.78rem;
+  opacity: 0.6;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* --- Hairline Dividers --- */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--espresso);
+  opacity: 0.12;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  padding: 80px 0 80px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.7;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* --- Circular Seal --- */
+.seal {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1.5px solid var(--espresso);
+  margin: 0 auto 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.seal::before {
+  content: '';
+  position: absolute;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  border: 0.5px solid var(--espresso-light);
+}
+
+.seal::after {
+  content: '';
+  position: absolute;
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  border: 0.5px solid var(--espresso-light);
+}
+
+.seal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.seal-top,
+.seal-bottom {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.seal-icon {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--terracotta);
+  line-height: 1;
+  margin: 4px 0;
+}
+
+.seal-middle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* === TWO-COLUMN EDITORIAL === */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 12px;
+}
+
+.step {
+  margin-bottom: 32px;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step-label {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--terracotta);
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* === SCHOOL LIST === */
+.school-list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+}
+
+.school-list li {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--espresso-light);
+  letter-spacing: 0.01em;
+}
+
+.school-list li:first-child {
+  border-top: 1px solid var(--espresso-light);
+}
+
+/* === PULL QUOTE === */
+.pull-quote {
+  border-left: 2px solid var(--terracotta);
+  padding-left: 28px;
+  margin: 0;
+}
+
+.pull-quote p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.pull-quote cite {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.78rem;
+  font-style: normal;
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+}
+
+/* === SIGNUP FORM === */
+.signup-form {
+  margin-top: 40px;
+  max-width: 480px;
+}
+
+.form-group {
+  margin-bottom: 32px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  color: var(--espresso);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--espresso-light);
+  padding: 8px 0;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%233d2b1f' opacity='0.35'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.form-group input::placeholder {
+  color: var(--espresso);
+  opacity: 0.3;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: var(--terracotta);
+}
+
+.submit-btn {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background-color: var(--espresso);
+  border: none;
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background-color: var(--terracotta);
+}
+
+.submit-btn:active {
+  opacity: 0.8;
+}
+
+/* --- Confirmation Message --- */
+.confirmation {
+  margin-top: 32px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--terracotta);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.confirmation.visible {
+  opacity: 1;
+}
+
+/* === FOOTER === */
+.site-footer {
+  text-align: center;
+  padding: 60px 0 0;
+  font-size: 0.82rem;
+  opacity: 0.6;
+}
+
+.site-footer .small-note {
+  margin-top: 6px;
+  opacity: 1;
+}
+
+/* === FADE-IN ON SCROLL === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 680px) {
+  html {
+    font-size: 16px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .col-right .step:first-child {
+    margin-top: 32px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .seal {
+    width: 136px;
+    height: 136px;
+    margin-bottom: 40px;
+  }
+
+  .seal::before {
+    width: 124px;
+    height: 124px;
+  }
+
+  .seal::after {
+    width: 148px;
+    height: 148px;
+  }
+
+  .pull-quote p {
+    font-size: 1.05rem;
+  }
+
+  .signup-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 0 20px 60px;
+  }
+}

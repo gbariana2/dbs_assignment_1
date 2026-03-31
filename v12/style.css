@@ -1,0 +1,736 @@
+/* ==========================================================================
+   THE GRADUATE GAZETTE — Broadsheet Newspaper Styles
+   ========================================================================== */
+
+:root {
+  --ink: #1a1a1a;
+  --paper: #f5f0e8;
+  --paper-dark: #ebe5d9;
+  --rule: #2a2a2a;
+  --rule-light: #c0b8a8;
+  --spot: #8b0000; /* dark red spot color */
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Source Serif 4', 'Georgia', serif;
+  --font-ui: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   TOP BAR (Ticker / Weather / Date)
+   ========================================================================== */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: #555;
+  border-bottom: 1px solid var(--rule-light);
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.top-bar-center {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ticker-up {
+  color: var(--spot);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   MASTHEAD
+   ========================================================================== */
+
+.masthead {
+  text-align: center;
+  padding: 0.75rem 0 0;
+}
+
+.masthead-rule {
+  height: 2px;
+  background: var(--ink);
+  margin: 0.4rem 0;
+}
+
+.masthead-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #666;
+  padding: 0.3rem 0;
+}
+
+.motto {
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+}
+
+.nameplate {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin: 0.25rem 0;
+}
+
+.nameplate-subtitle {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+/* ==========================================================================
+   LEAD STORY
+   ========================================================================== */
+
+.lead-story {
+  margin: 1.5rem 0;
+}
+
+.lead-headline-area {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.lead-headline {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+
+.lead-subhead {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  line-height: 1.4;
+  color: #444;
+  max-width: 750px;
+  margin: 0 auto 0.6rem;
+}
+
+.byline {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #666;
+}
+
+.author {
+  font-weight: 600;
+}
+
+.dateline {
+  font-weight: 500;
+}
+
+/* Columns */
+.columns-3 {
+  column-count: 3;
+  column-gap: 2rem;
+  column-rule: 1px solid var(--rule-light);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.columns-3 p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  text-indent: 1.5em;
+}
+
+.columns-3 p:first-child {
+  text-indent: 0;
+}
+
+/* Drop cap */
+.drop-cap {
+  float: left;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 4.2rem;
+  line-height: 0.75;
+  margin-right: 0.1rem;
+  margin-top: 0.08rem;
+  color: var(--ink);
+}
+
+/* Pull Quote (inline in columns) */
+.pull-quote {
+  column-span: all;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.pq-mark {
+  color: var(--spot);
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* ==========================================================================
+   MIDDLE SECTION — Two-column sidebar layout
+   ========================================================================== */
+
+.middle-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--ink);
+}
+
+.sidebar-article {
+  text-align: justify;
+}
+
+.section-header {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.article-rule {
+  height: 1px;
+  background: var(--rule-light);
+  margin-bottom: 0.5rem;
+}
+
+.small-byline {
+  font-size: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+/* How It Works Steps */
+.step-list {
+  margin: 0.75rem 0;
+}
+
+.step {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--spot);
+  flex-shrink: 0;
+  min-width: 1.5rem;
+}
+
+/* Info Box */
+.info-box {
+  background: var(--paper-dark);
+  border: 1px solid var(--rule-light);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.info-box h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stat-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  padding: 0.25rem 0;
+  border-bottom: 1px dotted var(--rule-light);
+  font-size: 0.85rem;
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  min-width: 3.5rem;
+  color: var(--spot);
+}
+
+/* Schools */
+.schools-body p {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.school-list {
+  margin: 0.75rem 0;
+}
+
+.school-item {
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted var(--rule-light);
+  font-size: 0.9rem;
+}
+
+.school-item:last-child {
+  border-bottom: none;
+}
+
+.school-detail {
+  display: block;
+  font-size: 0.75rem;
+  color: #666;
+  font-family: var(--font-ui);
+}
+
+.schools-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Mini Ad */
+.mini-ad {
+  margin-top: 1.25rem;
+}
+
+.mini-ad-border {
+  border: 2px solid var(--ink);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.mini-ad-text {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   BANNER QUOTE
+   ========================================================================== */
+
+.banner-quote {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.banner-rule {
+  height: 1px;
+  background: var(--rule-light);
+}
+
+.banner-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  padding: 0.75rem 2rem;
+  line-height: 1.5;
+}
+
+.banner-attr {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #666;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   CLASSIFIEDS
+   ========================================================================== */
+
+.classifieds {
+  margin: 2rem 0;
+}
+
+.classifieds-header {
+  text-align: center;
+}
+
+.classifieds-header h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.4rem 0;
+}
+
+.classifieds-rule {
+  height: 1px;
+  background: var(--ink);
+}
+
+.classifieds-rule.double {
+  height: 3px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+}
+
+.classifieds-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Main classified ad / signup form */
+.classified-ad {
+  border: 2px solid var(--ink);
+  padding: 1.25rem;
+  position: relative;
+}
+
+.classified-ad-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.ad-category {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.ad-number {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  color: #888;
+}
+
+.classified-intro {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Form */
+.classified-form {
+  font-family: var(--font-ui);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+.required {
+  color: var(--spot);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border: 1px solid var(--rule-light);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23333'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  padding-right: 2rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px var(--ink);
+}
+
+.form-actions {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.btn-submit {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 0.65rem 2rem;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background: var(--spot);
+}
+
+.classified-fine-print {
+  font-size: 0.7rem;
+  color: #888;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-family: var(--font-ui);
+  line-height: 1.5;
+}
+
+/* Confirmation */
+.confirmation {
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.confirmation.hidden {
+  display: none;
+}
+
+.confirmation-inner {
+  text-align: center;
+  padding: 2rem;
+}
+
+.confirmation-inner h4 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.confirmation-inner p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-small {
+  font-size: 0.75rem !important;
+  color: #888;
+  font-style: italic;
+}
+
+/* Sidebar classifieds */
+.classified-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.classified-mini {
+  border: 1px solid var(--rule-light);
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.ad-category-small {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--spot);
+  margin-bottom: 0.3rem;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.footer {
+  padding-bottom: 2rem;
+}
+
+.footer-rule {
+  height: 2px;
+  background: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.footer-content {
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.footer-small {
+  font-size: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .columns-3 {
+    column-count: 2;
+  }
+
+  .middle-section {
+    grid-template-columns: 1fr;
+  }
+
+  .classifieds-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.15rem;
+  }
+
+  .top-bar-right {
+    display: none;
+  }
+
+  .masthead-meta {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .nameplate {
+    font-size: 2.2rem;
+  }
+
+  .columns-3 {
+    column-count: 1;
+  }
+
+  .lead-headline {
+    font-size: 1.5rem;
+  }
+
+  .pull-quote {
+    padding: 0.75rem 1rem;
+    font-size: 1.05rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-quote p {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .classified-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .classified-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+  body {
+    background: white;
+    max-width: none;
+  }
+
+  .btn-submit {
+    border: 1px solid var(--ink);
+  }
+}
